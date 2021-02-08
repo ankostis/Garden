@@ -1,3 +1,6 @@
+---
+tags: jobs
+---
 # Gearshifting Tool
 
 ## Review task

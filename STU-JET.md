@@ -1,3 +1,6 @@
+---
+tags: jobs
+---
 # STU-JET
 
 ## Review task
