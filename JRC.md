@@ -1,4 +1,5 @@
 ---
+type: index
 tags: jobs
 ---
 # JRC
