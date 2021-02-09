@@ -23,6 +23,7 @@ tags: shopping
   - [page flags]() for:
     - github issues (authored & commented)
     - chrome & firefox plugins (to know you have installed them)
+  - see also: [[Agora Bridge]]
 
 ## Personal Knowledge Database
 
