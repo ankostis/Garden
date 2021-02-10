@@ -19,7 +19,7 @@ tags: jobs.JRC
       * multiple assignees (we use that in co2mpas)
       * code-review versatility (not extensively used it)
       * github-pages(none used, but nice for semi-static sites)
-  * if we switch to Team Plan (4$/month):
+  * if we switch to Team Plan (4$ * 23 = 96/month!):
     * private-repos features are preserved
     * "standard" support (not just "community)
   * In any case, we don't lose any LFS packages.
@@ -64,4 +64,26 @@ Hope this helps! If we can provide more information or help in some other way ju
 
 All the best,  
 Aaron  
+GitHub Support
+
+
+## Ticket 1011157 response: Feb 10 2021
+
+@kostis
+> We have a billing month pending. According to this billing clause, 
+> downgrading applies at the end of your current billing cycle, 
+> so i guess this triggers if we choose "Team free"
+>
+> What happens if we choose Team (4$/month)? Is this an upgrade, or a downgrade, according to the above clauses?
+
+Hi there,
+
+Thanks for writing in. Moving to our Team subscription would cause an immediate charge attempt
+to process for that change. It's of note that moving to Team today would require 23 paid seats,
+so a charge of $92 would be processed.
+
+If we can help in some other way just let us know.
+
+All the best,
+Aaron
 GitHub Support
