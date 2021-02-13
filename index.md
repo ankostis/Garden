@@ -1,6 +1,8 @@
 ---
 type: index
 ---
+# Waste of time
+
 <img src="https://avatars.githubusercontent.com/u/501585?s=400&u=7890857e8bd8ee538a30d78f4966fae64c104830&v=4" width=100 align="left">
 
 Welcome to the [[digital-garden]][*] of [[ankostis]].
