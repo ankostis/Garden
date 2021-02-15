@@ -11,3 +11,4 @@
 - IT regression (also to e-syriza):
   - [ ] do you upload recordings the in the internet (like proto-radio does)?
   - [ ] do you maintain e-lists of Media violations (& lists of any kind)?
+- [ ] don't lough against rousfeti & crime (e.g. re-hiring university Guards)
