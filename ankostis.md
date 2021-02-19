@@ -18,6 +18,6 @@ I do read constantly: cosmology, math, physics, biology, philosophy, history, po
 
 - [Waste Of Time](https://ankostis.blogspot.com/) - (Jul 2006) my retired blog @ blogspot.com
 - [ankostis@diaspora](ankostis@joindiaspora.com) - (Nov 2010)
-- [ankostis@keybase](https://keybase.io/ankostis) - (Dec 2016)
-- [ankostis@mastodon](https://libretooth.gr/@ankostis) - (Nov 2018)
+- [ankostis@keybase.io](https://keybase.io/ankostis) - (Dec 2016)
+- [ankostis@libretooth.gr](https://libretooth.gr/@ankostis) - (mastodon, Nov 2018)
 - [ankostis@solid](https://ankostis.solidcommunity.net/) - (Feb 2021)
