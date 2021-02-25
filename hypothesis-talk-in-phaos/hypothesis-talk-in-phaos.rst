@@ -4,6 +4,10 @@
 :slide-numbers: true
 :css: presentation.css
 
+.. footer::
+
+    "Reviving the Web (and Democracy within)", Kostis Anagnostopoulos, 2021
+
 ######
 
 Who?  What?  Why?
@@ -32,7 +36,7 @@ https://ankostis.io
 
 ######
 
-:data-x: r800
+:data-y: r1000
 
 .. 00:30
 
@@ -67,6 +71,9 @@ https://ankostis.io
    | **“hypertext”**.
 
 ######
+
+:data-x: r800
+:data-y: r0
 
 .. 00:50, 01:18
 
@@ -200,9 +207,9 @@ By the People, For the people
 :data-y: r1000
 :data-rotate: 90
 
-('80s) Appropriation of the Web
-===============================
-walled gardens
+The Appropriation of the Web started in the '80s
+================================================
+«Walled gardens»
 ----------------
 | |GAFAM|
 | «φοβοῦ τοὺς Δαναοὺς καὶ δῶρα φέροντας»
@@ -211,12 +218,12 @@ walled gardens
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. class:: substep
 
-   * 1980: *Microsoft*: MS-DOS, Windows, GitHub(?)
-   * 1998: *Google*: google, Gmail, Android
-   * 2001: *Apple*: MacOS
-   * 2004: *Facebook*: MacOS
-   * ...
-   * 1974: *NSA*: internet(TCP/IP) :-)
+* 1980: *Microsoft*: MS-DOS, Windows, GitHub(?)
+* 1998: *Google*: google, Gmail, Android
+* 2001: *Apple*: MacOS
+* 2004: *Facebook*: fb
+* ...
+* 1974: *NSA*: internet(TCP/IP) :-)
 
 .. note::
 
@@ -238,26 +245,25 @@ walled gardens
 
 .. 02:52
 
-Reclaim the  Web!
-=================
+Free-software fought back!
+==========================
 | |occupy github|
 
-Free-software developers of the planet are struggling with:
------------------------------------------------------------
-* Web 2.0
-* Torrents & Tor
-* |IPFS| |NYM|
-* Blockchains & Distributed Ledgers
-* **W3C Web-annotations**
+..with distributed software to Reclaim the  Web!
+------------------------------------------------
 
-  * *Hypothes.is*
+* Web 2.0,
+* p2p
+* Distributed Ledgers
+* Torrents, Tor
+* |IPFS| |NYM|
 
 .. class:: substep
 
-   * to help us reclaim our data
-   * ... to build personal gardens (of knowledge)
-   * ... to share & liberate them
-   * ... fully under our own control.
+* and help us το reclaim our data
+* ... to build personal gardens (of knowledge)
+* ... to share & liberate them
+* ... fully under our own control.
 
 .. note::
 
@@ -284,9 +290,17 @@ Free-software developers of the planet are struggling with:
 
 But what about "us", humble users?
 ==================================
-We can start annotating right now our walk-arounds the Web!
------------------------------------------------------------
-| *<live demo>*
+.. class: substep
+
+| |breadcrumbs|
+
+.. class:: substep
+
+* We can start annotating right now our walks around the Web!
+
+   * **W3C Web-annotations**
+
+      * <live demo>
 
 .. note::
 
@@ -301,15 +315,18 @@ We can start annotating right now our walk-arounds the Web!
 
 ######
 
-:data-x: 2200
-:data-y: -2000
-:data-scale: 3.0
-:data-z: 2000
+:data-x: 2600
+:data-y: 800
+:data-scale: 4.0
+:data-z: 1000
+:data-rotate-x: -60
 
 Thank you
 =========
-27 Feb 2021, Phaos space, Kalamata
-----------------------------------
+27 Feb 2021, Phaos space
+------------------------
+Kalamata
+--------
 
 .. note::
 
@@ -321,10 +338,10 @@ Thank you
 
 ######
 
-:data-x: 3000
-:data-y: -1200
-:data-z: 4000
-
+:data-x: 2800
+:data-y: -200
+:data-z: 1200
+:data-rotate-x: 0
 
 .. |reg| replace:: :sup:`®`
 .. |br| raw:: html
@@ -332,7 +349,7 @@ Thank you
   <br/>
 
 .. |ankostis urls| image:: images/ankostis-urls.png
-   :width: 500px
+   :width: 600px
 .. |Ted Nelson| image:: images/TedNelson-xanadu.png
    :width: 400px
 .. |hypertext| image:: images/hypertext-1963.png
@@ -353,3 +370,5 @@ Thank you
    :height: 64px
 .. |NYM| image:: images/NYM-logo.png
    :height: 64px
+.. |breadcrumbs| image:: images/kids-breadcrumbs.png
+   :width: 500px
