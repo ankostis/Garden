@@ -1,24 +1,22 @@
 :title: Reviving the Web (and Democracy within)
-:auto-console: true
-:skip-help: false
+:skip-help: true
+:auto-console: false
 :slide-numbers: true
 :css: presentation.css
 
-----
-
-.. 00:00
+######
 
 Who?  What?  Why?
 =================
 
 A tired programmer...
 ---------------------
-...but i still like it!
+| ...but i still like it!
 
 https://ankostis.io
 -------------------
 
-|ankostis urls|
+| |ankostis urls|
 
 .. note::
 
@@ -32,20 +30,26 @@ https://ankostis.io
    | πότε χάσαμε αυτο το οραμα αυτό στην πορεία?
    | Και τι μπορούμε να κανουμε σήμερα, για να το ξαναβρουμε.
 
-----
+######
+
+:data-x: r800
 
 .. 00:30
 
-The *conception* of the Web
-===========================
-without Ritalin\ |reg|
-----------------------
+(1945) The *conception* of the Web
+==================================
+(without Ritalin\ |reg|)
+------------------------
+
+*  *Vanevar Bush* conceived the **"memex"** project based on "linked" microfilms. |br|
+   Impractical!
+
+... but was Ted Nelson’s hyperactive(ADHD) mind
+-----------------------------------------------
+* infused with ideas which he could not control...
+* ... so he let them loose, and envisioned a system to “interconnect” them all.
 
 |Ted Nelson|
-
-* In 1963, Ted Nelson’s hyperactive(ADHD) mind is
-  infused with ideas which he cannot control.
-* So he lets them take over, and envisions a system to “interconnect” them.
 
 .. note::
 
@@ -62,18 +66,17 @@ without Ritalin\ |reg|
    | Το ονομασε “μη-σειραϊκή γραφή” αλλά τελικά κράτησε τον πιο πιασαρικό όρο:
    | **“hypertext”**.
 
-----
+######
 
 .. 00:50, 01:18
 
-Project *Xanadu*
-================
+(1963) Project *Xanadu*
+=======================
 ...that never came to be.
 -------------------------
 |hypertext| |project-Xanadu|
 
-* Ted coined the term “hypertext”.
-* He envisioned project “Xanadu” to implement it...
+* *Ted Nelson* coined the term “hypertext”, project “Xanadu” was to implement it.
 * an open, collaborative, never-ending set of interconnected records...
 * that has not *yet* materialized :-)
 
@@ -89,18 +92,26 @@ Project *Xanadu*
    | Ακόμα και σημερα ο Ted, και καποιοι πιστοί του προγραμματιστες,
    | καπου στον πλανητη, προσπαθούν ακόμα να το τελειώσουν, ...
 
-----
+######
 
-GNU: Free for All
-=================
-...the programmers, at least.
------------------------------
-|The GNU Manifest| |Stallman, circa 2000|
+:data-x: r1000
+:data-y: r-300
+
+(1985) GNU, Free for All!
+=========================
+...for the programmers, at least.
+---------------------------------
 
 * The *Tragedy of the Commons* plagued economist minds since the 19th century.
 * Richard M. Stallman changed the way we cooperate on and share *common* virtual assets.
+  |Stallman, circa 2000|
 * Open-source movement (Eric Raymond) proliferated to all works of society.
-* If only real life institutions (e.g. Major-hall) followed through...
+
+| |The GNU Manifest|
+
+If only real life institutions had followed through...
+------------------------------------------------------
+...why not, government ministries & local-councils?
 
 .. note::
 
@@ -111,20 +122,25 @@ GNU: Free for All
    | χιλιάδες χιλόμετρα μακρυα, από τη μια ακρη του πλανήτη στην αλλη.
    | Αρχικά ΓΙΑ software, μετά ΓΙΑ εργα τεχνης, πιο μετα, για ολα.
 
-----
+######
+
+:data-y: r-600
 
 ..   01:51
 
-The birth of the Web
-====================
-...by a man named *Tim Berner Lee*
-----------------------------------
+(1989) The birth of the Web
+===========================
+...by *Tim Berner Lee* @ CERN
+-----------------------------
+(hint: still alive today, still fighting the same cause)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-|map of the internet|
+| |map of the internet|
 
-* On 1989 Tim Berner Lee implemented WWW and revolutionized internet.
-* While open-ended, it was read-only, localized, and statically linked.
-* client-server model –> *providers* & *users* - users had less power!
+* While open-ended, ...
+* it was read-only, localized, and statically linked.
+* The *client-server* model splitted people into *providers* & *users*.
+* *Users* had significantly less power!
 
 .. note::
 
@@ -139,48 +155,68 @@ The birth of the Web
    | ΠΑΛΙ δεν προλαβαν να τελειωσουν ενα peer2peer Web augmentation layer
    | από τον καθε χρηστη προς ολους τους άλλους ...
 
-----
+######
+
+:data-y: r-300
 
 .. 02:20
 
-Knowledge to the People
-=======================
+(2001) Wikipedia
+================
+By the People, For the people
+-----------------------------
 ...last call!
--------------
+^^^^^^^^^^^^^
 
 |Wikipedia editors statistics|
 
-* Wikipedia has been the universal library we envisioned for ages.
-* But very few other, trully global initiatives materialized since
-  (e.g biology, IT, but no *politics* or *economy*)
-* *Discussion that matter* happened *somewhere else*...
+* Universal library WE envisioned for ages.
+* But very few other, truly global initiatives materialized since |br|
+  (e.g. biology, IT, but no *politics* or *economy*)
 
 .. note::
 
    | Το 2001 εχουμε την Wikipedia. Που πατώντας στα προηγούμενα, προσπαθει να
    | ενωσει την παγκοσμια γνωση.
    | And that’s it!
-   | Αυτό ητανε το τελευταίο project που αποπειράθηκε να διευκολύνει την παγκόσμιο κοινοτητα
+   | Ητανε το τελευταίο μεγάλο "δημόσιο" project που αποπειράθηκε να διευκολύνει την παγκόσμιο κοινοτητα
    | να συμμετέχει, *επί ίσοις όροις* στο internet.
    |
    | Εκει στραβωσε το πραμα.
    | Εκεί εγκαταλείψαμε!
 
-----
+######
 
-Appropriation of the Web
-========================
-"walled gardens"
+:data-x: r400
+:data-y: r800
+
+*Discussions that mattered* were already happening *somewhere else*...
+======================================================================
+
+
+######
+
+:data-x: r0
+:data-y: r1000
+:data-rotate: 90
+
+('80s) Appropriation of the Web
+===============================
+walled gardens
 ----------------
+| |GAFAM|
+| «φοβοῦ τοὺς Δαναοὺς καὶ δῶρα φέροντας»
 
-|GAFAM|
+*all your data belong to us!*
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. class:: substep
 
-* 1945: *Vanevar Bush* (project **“memex”**)
-* 1963: *Ted Nelson* (project **“Xanadu”**)
-* 1985: *Richard Stallman* (**“GNU Manifesto”**)
-* 1989: *Tim Berner Lee* (**“World Wide Web”**)
-* 2001: *Jimmy Wales* (**“Wikipedia”**)
-* 2000s: GAFA... **all you data belong to us!**
+   * 1980: *Microsoft*: MS-DOS, Windows, GitHub(?)
+   * 1998: *Google*: google, Gmail, Android
+   * 2001: *Apple*: MacOS
+   * 2004: *Facebook*: MacOS
+   * ...
+   * 1974: *NSA*: internet(TCP/IP) :-)
 
 .. note::
 
@@ -190,22 +226,38 @@ Appropriation of the Web
    |
    | Αλλα επειδή αυτό φυσικά ήταν μια φενάκη,
    | μετά ήρθαν το facebook, twitter, instagram,
-   | και εκει σταματάν οι γνωσεις μου.
+   | και εκει σταματάν οι γνωσεις μου, υστερα το "χαος".
    |
-   | Και εκεί αρχινάν τα προβλήματα....
+   | Και εκεί αρχινάν τα προβλήματα....πως να τους αντικαταστησουμε?
 
-----
+######
 
-02:52
+:data-x: r200
+:data-y: r-2800
+:data-rotate: -90
 
-Occupy Web!
-===========
+.. 02:52
 
+Reclaim the  Web!
+=================
+| |occupy github|
+
+Free-software developers of the planet are struggling with:
+-----------------------------------------------------------
 * Web 2.0
-* Torrents
-* Bitcoin
-* But what about *me*...the humble developer / user?
-* Start low: building gardens (of knowledge)
+* Torrents & Tor
+* |IPFS| |NYM|
+* Blockchains & Distributed Ledgers
+* **W3C Web-annotations**
+
+  * *Hypothes.is*
+
+.. class:: substep
+
+   * to help us reclaim our data
+   * ... to build personal gardens (of knowledge)
+   * ... to share & liberate them
+   * ... fully under our own control.
 
 .. note::
 
@@ -213,22 +265,66 @@ Occupy Web!
    | Το αποπειραθήκαμε το 2000 με τα blogs ... δεν φτούρισαν.
    |
    | Αλλα το ξερουμε, η λυση αυτή ειναι, να γινουμε *ολοι παραγωγοι*,
-   | όμως να μας ανηκουν τα μεσα παραγωγής, σωστα?
-   | Και το facebook, σιγουρα δεν ειναι τετοιο!
+   | (όμως να μας ανηκουν τα μεσα παραγωγής, σωστα? ;-)
    |
    | Αλλά και να μπορούμε να μοιραστούμε τα προϊόντα μας, ευκολα.
-   | Για παραδειγμα, ψαχνωντας για την παρουσιαση,
    |
-   | εφτιαξα το tag ``ιντερνετ``
+   | Και φυσικά ΠΡΩΤΑ ππορεποει να παρουμε πισω τα δεδομένα μας!
    |
+   | Και ΤΑ FACEBOOKS, σιγουρα δεν θελου κατι τετοιο!
+   | Τα APIs συνεχως κλεινουν το ενα μετα το αλλο
+   | (πίσω από "paywalls")
+
+
+######
+
+:data-x: r800
+:data-y: r1000
+:data-rotate: 0
+
+But what about "us", humble users?
+==================================
+We can start annotating right now our walk-arounds the Web!
+-----------------------------------------------------------
+| *<live demo>*
+
+.. note::
+
+   **TODO: αυριο το live demo!**
+
    | Μας λειπουν βεβαια και καποια "προχωρημενα" εργαλεια,
    | για server-less  για να κανουν την ενασχοληση μας παραγωγικη.
 
-----
+   | Για παραδειγμα, ψαχνωντας για την παρουσιαση,
+   |
+   | εφτιαξα το tag ``ιντερνετ``
+
+######
+
+:data-x: 2200
+:data-y: -2000
+:data-scale: 3.0
+:data-z: 2000
 
 Thank you
 =========
-27 Feb 2021, Phaos space
+27 Feb 2021, Phaos space, Kalamata
+----------------------------------
+
+.. note::
+
+   * 1945: *Vanevar Bush* (project **“memex”**)
+   * 1963: *Ted Nelson* (project **“Xanadu”**)
+   * 1985: *Richard Stallman* (**“GNU Manifesto”**)
+   * 1989: *Tim Berner Lee* (**“World Wide Web”**)
+   * 2001: *Jimmy Wales* (**“Wikipedia”**)
+
+######
+
+:data-x: 3000
+:data-y: -1200
+:data-z: 4000
+
 
 .. |reg| replace:: :sup:`®`
 .. |br| raw:: html
@@ -243,10 +339,17 @@ Thank you
    :width: 300px
 .. |project-Xanadu| image:: images/hypertext.png
 .. |The GNU Manifest| image:: images/GNU-manifesto-comic.png
+   :width: 400px
 .. |Stallman, circa 2000| image:: images/RMS.png
 .. |map of the internet| image:: images/internet-map.png
-   :width: 500px
+   :width: 300px
 .. |Wikipedia editors statistics| image:: images/wikipedia-editors.png
    :width: 700px
 .. |GAFAM| image:: images/GAFAM.png
    :width: 500px
+.. |occupy github| image:: images/occupy-github.png
+   :width: 300px
+.. |IPFS| image:: images/IPFS-logo.png
+   :height: 64px
+.. |NYM| image:: images/NYM-logo.png
+   :height: 64px
