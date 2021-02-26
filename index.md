@@ -7,7 +7,6 @@ type: index
 
 Welcome to the [[digital-garden]]<sup>*</sup> of [[ankostis]].
 
-- My [[web-annotations]]: https://hypothes.is/users/ankostis
 - My [[tags]] - what content to expect under them
 - [[inbox]] - a place to write down quick notes to be categorized later
 - [[todo]] - a place to keep track of things to do

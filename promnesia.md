@@ -2,7 +2,7 @@
 type: tool
 tags: pkdb promnesia HPI dev
 ---
-# Promensia & HPI`
+# Promensia & HPI
 
 - [ ] promnesia-PR: [GitHub GDPR source?](https://github.com/karlicoss/promnesia/issues/74#)
 - [ ] harvest GitHub

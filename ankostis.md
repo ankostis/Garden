@@ -1,6 +1,6 @@
 # Ankostis
 
-"The constant son of the man who reads" (the meaning of my surname).
+"The constant son of the man who reads" (the meaning of my full name).
 I do read constantly: cosmology, math, physics, biology, philosophy, history, politics, economy, IT, fiction
 
 - **ankostis@Gmail** - (Feb 2005)
@@ -12,7 +12,7 @@ I do read constantly: cosmology, math, physics, biology, philosophy, history, po
 - [ankostis@StackExchange](https://stackoverflow.com/users/548792/ankostis?tab=profile) - (Dec 2010)
 - [ankostis@keybase.io](https://keybase.io/ankostis) - (Dec 2016)
 - [ankostis@libretooth.gr](https://libretooth.gr/@ankostis) - (mastodon, Nov 2018)
-- [ankostis@Hypothes.is](https://hypothes.is/users/ankostis) - (Jan 2021)
+- [ankostis@Hypothes.is](https://hypothes.is/users/ankostis) - (Jan 2021) my web-annotations
 - [ankostis@Agora](https://anagora.org/@ankostis) - ([Feb 2021](https://twitter.com/flancian/status/1358907558023553033?s=20))
 - ORCID: [0000-0002-9533-4964](https://orcid.org/0000-0002-9533-4964)
 
