@@ -6,7 +6,7 @@
 
 .. footer::
 
-    "Reviving the Web (and Democracy within)", Kostis Anagnostopoulos, 2021
+    "`Reviving the Web (and Democracy within) <https://ankostis.io/data-liberation-talk/slides/>"`_, Kostis Anagnostopoulos, 2021
 
 ######
 
