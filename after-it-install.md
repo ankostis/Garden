@@ -1,5 +1,5 @@
 ---
-:tags: jobs-JRC
+:tags: dev
 ---
 
 # After ITR Install

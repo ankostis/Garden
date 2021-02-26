@@ -17,7 +17,7 @@ tags: pkdb hypothesis dev
   - `discord`
   - `reddit`
   - `gmail`: fetch also tags
-  - `keep` 
+  - `keep`
   - ...
   - [page flags]() for:
     - github issues (authored & commented)
