@@ -1,0 +1,18 @@
+hovercraft
+black
+dockutils   # needed by rst-ext
+rstcheck    # needed by rst-ext
+snooty      # needed by rst-ext to  forma text?
+
+
+-e ../promnesia.git[all]
+-e ../HPI.git[optional]
+-e ../pocketexport.git
+-e ../hypexport.git
+-e ../stexport.git
+-e ../ghexport.git
+fdfind
+logzero
+
+hypothesis
+python-twitter
