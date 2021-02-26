@@ -4,6 +4,7 @@ tags: pkdb promnesia HPI dev
 ---
 # Promensia & HPI
 
+- [ ] Integrate [Polar Bookshelf](https://github.com/burtonator/) by downloading everything in promnesia DB!
 - [ ] [promnesia-PR#204](https://github.com/karlicoss/promnesia/pull/204): Viber source:
   - [ ]  finalize PR-review
   - [ ]  spread into HPI
