@@ -252,18 +252,25 @@ Free-software fought back!
 ..with distributed software to Reclaim the  Web!
 ------------------------------------------------
 
+.. class:: col2
+
 * Web 2.0,
 * p2p
 * Distributed Ledgers
 * Torrents, Tor
 * |IPFS| |NYM|
+* `...and many more from the fediverse...
+  <https://privacy.ellak.gr/2021/02/17/fediverse-enallaktika-tou-facebook-instagram-ke-twitter-me-sevasmo-sta-prosopika-dedomena/>`_
 
 .. class:: substep
 
-* and help us το reclaim our data
-* ... to build personal gardens (of knowledge)
-* ... to share & liberate them
-* ... fully under our own control.
+ to help us το reclaim our data
+
+ ... to build personal gardens (of knowledge)
+
+ ... to share & liberate them
+
+ ... fully under our own control.
 
 .. note::
 
@@ -290,17 +297,16 @@ Free-software fought back!
 
 But what about "us", humble users?
 ==================================
-.. class: substep
 
 | |breadcrumbs|
 
 .. class:: substep
 
-* We can start annotating right now our walks around the Web!
+   We can start annotating right now our walks around the Web!
 
-   * **W3C Web-annotations**
+   **W3C Web-annotations**
 
-      * <live demo>
+   *<live demo>*
 
 .. note::
 

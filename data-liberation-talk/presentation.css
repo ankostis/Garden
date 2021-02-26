@@ -46,6 +46,13 @@ li {
     text-align: left;
 }
 
+.col2 {
+    columns: 300px 2;
+}
+.substep {
+    text-align: center;
+}
+
 a {
     text-decoration: none;
     color: black;
