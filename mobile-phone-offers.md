@@ -10,9 +10,24 @@ tags: shopping
   - date: 2021-02-09:
   - called-from: 6973 15 85 83
   - cost: 16e/month
-  - min-duration: 18 months 
-  - voice-in-provider: 900min 
-  - voice: 200 
+  - min-duration: 18 months
+  - voice-in-provider: 900min
+  - voice: 200
   - data: 2.2GB
   - extras: +1e/month (+30G, +3000min for the 1st 6 months)
 
+# vodafone
+
+- offer: καρτοκινητό
+- offer: συμβόλαιο asked @ shop
+  - date: 2021-02-25:
+  - cost: 22e/month (-2 απ'το σταθερο)
+  - min-duration: 24 months
+  - voice: unlimited
+  - data: 8GB
+- offer: καρτοπρογραμμα συμβόλαιο asked @ shop
+  - date: 2021-02-25:
+  - cost: 15/month
+  - min-duration: 18 months
+  - voice: 1000μιν
+  - data: 2GB
