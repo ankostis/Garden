@@ -8,7 +8,8 @@ tags: pkdb promnesia HPI dev
 - [ ] [promnesia-PR#204](https://github.com/karlicoss/promnesia/pull/204): Viber source:
   - [x]  finalize [promnesia-PR#208](https://github.com/karlicoss/promnesia/pull/208)
   - [ ]  spread into HPI
-- [ ] promnesia-PR: [GitHub GDPR source?](https://github.com/karlicoss/promnesia/issues/74#)
+- [ ] promnesia-PR: [GitHub
+- [ ] GDPR source?](https://github.com/karlicoss/promnesia/issues/74#)
 - [ ] harvest GitHub
 - [ ] harvest [Chrome & Firefox history](https://github.com/karlicoss/promnesia/blob/master/src/promnesia/sources/browser.py)
 - [ ] automate extraction & indexing
@@ -18,10 +19,11 @@ tags: pkdb promnesia HPI dev
 - [ ] HPI-PR: fill-in missing URLs from retweets in Twitter-archive (proposed in [karlicoss/promnesia#193](https://github.com/karlicoss/promnesia/issues/193)),
   based on [twitter-entities understanding](https://developer.twitter.com/en/docs/twitter-api/v1/data-dictionary/object-model/entities#retweets-quotes)
   (originally filed [karlicoss/promnesia#193](https://github.com/karlicoss/promnesia/issues/193))
-- [ ] promnesia-PR: cli to update only DB (fix [karlicoss/promnesia#20](https://github.com/karlicoss/promnesia/issues/20) for real time indexing)
+- [x] [promnesia-PR#211](https://github.com/karlicoss/promnesia/pull/211): cli to update only DB (fix [karlicoss/promnesia#20](https://github.com/karlicoss/promnesia/issues/20) for real time indexing)
 - [ ] HPI/promnesia PR: Disqus extractor
   - Requested GDPR disqus-archive:
-    - [awaiting archive](https://privacyportal.onetrust.com/ui/#/requests/details/ec5d415b-e5be-4615-b4bc-e887831b00e9)
+    - Archive came back quasi-empty!  Reported, and awaiting reply.
+    - [support issue](https://privacyportal.onetrust.com/ui/#/requests/details/ec5d415b-e5be-4615-b4bc-e887831b00e9)
     - [notification email](https://mail.google.com/mail/u/0/#inbox/FMfcgxwLsdKmRLGdNPBlVdzGdHGTSflb)
 
 
