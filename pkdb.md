@@ -3,6 +3,7 @@ tags: pkdb
 ---
 # Personal Knowledge Database
 
+- What started everything here: [beepb00p(Karlicoss) blog](https://beepb00p.xyz/pkm-setup.html)
 - My [[tags]] - what content to expect under them
 - [[Promnesia]] - browser extension (& HPI): exchange hub for all info across browsers
 - [[Hypothes.is]] - Open-source & W3C standard web-tagging
