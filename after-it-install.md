@@ -140,7 +140,26 @@ bind '"\e[A":history-search-backward'
 bind '"\e[B":history-search-forward'
 
 ### History append rather than overwrite
+# don't put duplicate lines or lines starting with space in the history.
+HISTCONTROL=ignoreboth
+
+# append to the history file, don't overwrite it
 shopt -s histappend
+PROMPT_COMMAND="history -a;$PROMPT_COMMAND"
+# attempt to save all lines of a multiple-line command in the same history entry
+shopt -s cmdhist
+# save multi-line commands to the history with embedded newlines
+shopt -s lithist
+
+# Store always & everything.
+# From http://jesrui.sdf-eu.org/remember-all-your-bash-history-forever.html
+#HISTSIZE=10000
+#HISTFILESIZE=20000
+HISTSIZE=-1
+HISTFILESIZE="no truncation (if not numeric)"
+#Ignore 1-char cmds
+HISTIGNORE=?:?
+
 
 ### Color manpages (Arch style)
 export LESS_TERMCAP_mb=$'\E[01;31m'
