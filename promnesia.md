@@ -9,6 +9,7 @@ tags: pkdb promnesia HPI dev
   - reported @ SO [for `systemctl --user`](https://unix.stackexchange.com/questions/383678/on-demand-ssh-socks-proxy-through-systemd-user-units-with-socket-activation-does)
 - [x] [promnesia-PR#211 for partial updates](https://github.com/karlicoss/promnesia/pull/211):
   CLI to update DB (fix [karlicoss/promnesia#20](https://github.com/karlicoss/promnesia/issues/20) for real time indexing)
+- [ ] PR: Logging INFO by default & configure logging by-file
 - [ ] automate extraction & indexing with cron jobs
 - [ ] Integrate [Polar Bookshelf](https://github.com/burtonator/) by downloading everything in promnesia DB!
 - [ ] HPI/promnesia extractors PRs:
