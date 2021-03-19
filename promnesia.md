@@ -16,6 +16,11 @@ tags: pkdb promnesia HPI dev
   - [ ] [promnesia-PR#204 for Viber source](https://github.com/karlicoss/promnesia/pull/204):
     - [x]  finalize [promnesia-PR#208](https://github.com/karlicoss/promnesia/pull/208)
     - [ ]  spread into HPI: But _telegram_ source is also promnesia-only!?
+  - [ ] HPI/promnesia PR: Signal extractor:
+    - export code taken from [`carderne/signal-export`](https://github.com/carderne/signal-export)
+    - [Allow exporting a backup from Signal Desktop](https://github.com/signalapp/Signal-Desktop/issues/522),
+      [Support creating an archive of messages and media (#1013)](https://github.com/signalapp/Signal-Desktop/issues/1013) and
+      [Error: Encrypted export/import is disabled (#2516)](https://github.com/signalapp/Signal-Desktop/issues/2516)
   - [ ] HPI/promnesia PR: Disqus extractor
     - Requested GDPR disqus-archive:
       - Archive came back quasi-empty!  Reported, and awaiting reply.
@@ -23,9 +28,10 @@ tags: pkdb promnesia HPI dev
       - [notification email](https://mail.google.com/mail/u/0/#inbox/FMfcgxwLsdKmRLGdNPBlVdzGdHGTSflb)
   - [ ] Amazon extractor (e.g. books whish-list)
   - [ ] Zulip extractor
+  - [ ] Wikipedia extractor
   - [ ] [GitHub GDPR source?](https://github.com/karlicoss/promnesia/issues/74#)
 - [ ] harvest from `stexport`: [OAuth](https://stackapps.com/apps/oauth/view/19769) fail!
-  - Throttle-limited for 24hours(!), see [karlicoss/stexport#1](https://github.com/karlicoss/stexport/issues/1)
+  - [x] Throttle-limited for 24hours(!), reported in [karlicoss/stexport#1](https://github.com/karlicoss/stexport/issues/1), fixed.
 - [ ] harvest [Chrome & Firefox history](https://github.com/karlicoss/promnesia/blob/master/src/promnesia/sources/browser.py)
 - [ ] Promnesia-PR to document all the above (see also [karlicoss/promnesia#15](https://github.com/karlicoss/promnesia/issues/15))
 - [ ] HPI-BUGs: x2 bugs to HPI & pockexport [[pkdb]] tools
