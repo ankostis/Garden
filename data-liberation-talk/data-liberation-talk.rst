@@ -321,7 +321,13 @@ But what about "us", humble users?
 
    **W3C Web-annotations**
 
-   *<live demo>*
+   * **Hypothe.is** *<live demo>*
+   * See `possible usages <https://web.hypothes.is/blog/varieties-of-hypothesis-annotations-and-their-uses/>`_:
+
+      * Highlights
+      * Annotating comments & tags
+      * Page nots (aka social bookmarking)
+      * Replies (aka social thing)
 
 .. note::
 
