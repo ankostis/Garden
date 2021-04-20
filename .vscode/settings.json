@@ -26,12 +26,6 @@
   "vscodeMarkdownNotes.noteCompletionConvention": "noExtension",
   "vscodeMarkdownNotes.slugifyMethod": "github-slugger",
   "window.autoDetectColorScheme": true,
-  "cSpell.words": [
-    "Disqus",
-    "JRCSTU",
-    "Kolettis",
-    "promnesia"
-  ],
   "restructuredtext.confPath": "",
   "python.pythonPath": ".venv/bin/python",
 }
