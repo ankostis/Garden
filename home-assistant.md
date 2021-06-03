@@ -13,26 +13,18 @@
 - [x] ONVIF camera,
   - [ ] PTZ
   - [ ] block chinese servers
+- [ ] Aqara-cube miss-registered: events missing!
+- [ ] Bluetooth tracker
 - [x] floor map
   - [ ] produce map with sweethome3d-furniture-nonfree
   - [ ] link css with entities
 - [x] hass-integrate UPS: simply with apcusp "manual" integration
-  - [-] replace `acpcupsd` with `nut` server: NO
+  - [-] replace `acpcupsd` with `nut` server: NO, hass-integration works
   - [-] develop own `acpcupsd` integration (based on https://www.home-assistant.io/integrations/apcupsd/)
+  - [x] fixed mismatched entities: maxlinev--->HITRANS, minlinev-->LOTRANS, outputv, LASTXFER, NUMXFERS, BATTV
+  - [ ] DEV: new  UPS device, to attach all its entities
 - Automation rules:
   - [x] battery-low sensors (from blueprints)
   - [ ] Alarm!!
-
-## HW
-
-- [x] x7 magnets: x1 bath, x2 doors, x4 Windows
-- [x] x3 motions: x2 doors, x1 indoor
-- [ ] x3 xiaomi light sensors
-- [ ] x1 smoke detector
-- [ ] x4 power-plugs
-- [ ] x1 xiaomi cube controller
-- [ ] x1 color lamp
-
-## Dev ideas
-
-- keybase integration
+    - [ ] group-away does not trigger(?)
+- [ ] DEV: keybase integration

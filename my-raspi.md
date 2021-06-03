@@ -5,6 +5,12 @@ tags: dev
 # My raspi
 
 - [[home-assistant]]
+- [x] connect with eth-cable
+  - [x] from `dhcpcdd` --> `networkd`
+  - [x] `resolvd`: restore mDNS e.g. `raspanki.local`
+    - [ ] augment SO replies
+  - [x] disables WiFi
+    - [ ] no restore it if no eth
 - [ ] etckeeper -> keybase!!!
   - [ ] install keybase
 - [x] UPS cgi has broke: it's a hostname issue (`localhost` does not work, needs IP)
