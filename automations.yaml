@@ -39,6 +39,32 @@
         entity_id: switch.lumi_lumi_plug_mmeu01_on_off
 
 
+## For "cube" actions see:
+ #  https://community.home-assistant.io/t/aqara-magic-cube-zha-51-actions/270829
+- alias: Cube - bed light
+  id: cube.bed_light
+  trigger:
+    - device_id: 0e5445a154a8f2ca88db7cabc8bdf643
+      domain: zha
+      platform: device
+      type: device_rotated
+      subtype: left
+    - device_id: 0e5445a154a8f2ca88db7cabc8bdf643
+      domain: zha
+      platform: device
+      type: device_rotated
+      subtype: right
+  action:
+    - type: toggle
+      device_id: 65bd2a661f896ea9c332a2fad3bd8beb
+      entity_id: switch.lumi_lumi_plug_mmeu01_14458e3c_on_off
+      domain: switch
+
+
+###########
+## ALARM ##
+###########
+
 - alias: Alarm - ARM when family leaves
   id: alarm.arm_when_home_empty
   trigger:
@@ -58,8 +84,11 @@
     to: home
   condition: []
   action:
-  - service: alarm_control_panel.alarm_disarm
-    entity_id: alarm_control_panel.alarm
+    - service: alarm_control_panel.alarm_disarm
+      entity_id: alarm_control_panel.alarm
+    - service: notify.notify
+      data:
+        message: "Alarm - ARMED because family has left {{ trigger.entity_id }}"
 
 
 - alias: Alarm - ARMED actions
@@ -69,15 +98,13 @@
     platform: state
     entity_id: alarm_control_panel.alarm
     to:
-      "armed_away"
+      - "armed_away"
+      - "armed_home"
   action:
-    - service: notify.notify
-      data:
-        message: "Alarm - ARMED"
     - service: persistent_notification.create
       data:
         notification_id: pnotif.alarm_away_armed
-        message: "Alarm - armed!"
+        message: "Alarm - ARMED {{ trigger.entity_id }}"
     - service: switch.turn_on
       target:
         entity_id: switch.lumi_lumi_plug_mmeu01_c3318a3c_on_off
@@ -97,15 +124,14 @@
         entity_id: switch.lumi_lumi_plug_mmeu01_c3318a3c_on_off
 
 
-- alias: Alarm - TRIGGER when sensors change
+- alias: Alarm - TRIGGER & notify whenever perimeter sensors change
   id: alarm.trigger_conditions
+  mode: queued
   trigger:
     - platform: state
       entity_id: 
-        #group.perimeter_sensors
-        - binary_sensor.lumi_lumi_sensor_motion_occupancy
-        - binary_sensor.lumi_lumi_sensor_motion_b9463306_occupancy
-        - binary_sensor.lumi_lumi_sensor_motion_f3d33206_occupancy
+        #- group.perimeter_sensors # NO, does not change state collectively!
+        - binary_sensor.lumi_lumi_sensor_motion_ias_zone
         - binary_sensor.lumi_lumi_sensor_magnet_d6faaa04_on_off
         - binary_sensor.lumi_lumi_sensor_magnet_181e0e04_on_off
         - binary_sensor.lumi_lumi_sensor_magnet_48e6c703_on_off
@@ -113,16 +139,48 @@
         - binary_sensor.lumi_lumi_sensor_magnet_87186204_on_off
         - binary_sensor.lumi_lumi_sensor_magnet_30f9aa04_on_off
         - binary_sensor.lumi_lumi_sensor_magnet_f3046204_on_off
-
-  # condition:
-  #   - condition: state
-  #     entity_id: alarm_control_panel.alarm
-  #     state: armed_away
-  action:
-    service: alarm_control_panel.alarm_trigger
-    target:
+  condition:
+    - condition: state
       entity_id: alarm_control_panel.alarm
+      state: 
+        - armed_away
+        - armed_home
+        - triggered
+  action:
+    - service: alarm_control_panel.alarm_trigger
+      target:
+        entity_id: alarm_control_panel.alarm
+    - service: notify.notify
+      data:
+        message: "ALARM: {{ trigger.entity_id }} TRIPPED!"
+    - service: notify.web_push
+      data:
+        message: "ALARM: {{ trigger.entity_id }} TRIPPED!"
 
+
+- alias: Alarm - SCREAM on outside motion
+  id: alarm.scream_when_armed
+  mode: queued
+  trigger:
+    - platform: state
+      entity_id: 
+        - binary_sensor.lumi_lumi_sensor_motion_b9463306_ias_zone
+        - binary_sensor.lumi_lumi_sensor_motion_f3d33206_ias_zone
+      to: 'on'
+  condition:
+    - condition: state
+      entity_id: alarm_control_panel.alarm
+      state: 
+        - armed_away
+        - armed_home
+        - triggered
+  action:
+    - service: notify.notify
+      data:
+        message: "ALARM: outside motions {{ trigger.entity_id }}"
+    - service: notify.web_push
+      data:
+        message: "ALARM: outside motions {{ trigger.entity_id }}"
 
 - alias: Alarm - TRIGGERED actions
   id: alarm.triggered_actions
@@ -130,12 +188,15 @@
     - platform: state
       entity_id: alarm_control_panel.alarm
       to: "triggered"
-  action:
+  action: 
     - service: notify.notify
       data:
-        message: "ALARM: >>TRIGGERED<<"
+        message: "ALARM: {{ trigger.entity_id }} >>TRIGGERED<< "
+    - service: notify.web_push
+      data:
+        message: "ALARM: {{ trigger.entity_id }} >>TRIGGERED<< "
     - service: persistent_notification.create
       data:
-        notification_id: pnotif.alarm_away_armed
-        message: "ALARM: >>TRIGGERED2<<"
- 
+        notification_id: pnotif.alarm_triggered
+        message: "ALARM: {{ trigger.entity_id }} >>TRIGGERED<< "
+
