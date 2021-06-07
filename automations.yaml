@@ -1,0 +1,141 @@
+- id: '1622447181303'
+  alias: Low battery sensors
+  description: ''
+  use_blueprint:
+    path: sbyx/low-battery-level-detection-notification-for-all-battery-sensors.yaml
+    input:
+      threshold: 17
+      actions:
+        - service: notify.persistent_notification
+          data:
+            message: 'Sensors with low battery: {{sensors}}'
+      exclude:
+        entity_id: []
+        device_id: 60665fd5bae23d06c5b0eb3820d76190
+
+
+- alias: Garden lights - ON after sunset
+  id: garden_lights.on_after_sunset
+  trigger:
+    - platform: numeric_state
+      entity_id: sun.sun
+      attribute: elevation
+      below: -4.0
+  action:
+    - service: switch.turn_on
+      target:
+        entity_id: switch.lumi_lumi_plug_mmeu01_on_off
+
+- alias: Garden lights - OFF after sunrise
+  id: garden_lights.off_after_sunrise
+  trigger:
+    - platform: numeric_state
+      entity_id: sun.sun
+      attribute: elevation
+      above: -4.0
+  action:
+    - service: switch.turn_off
+      target:
+        entity_id: switch.lumi_lumi_plug_mmeu01_on_off
+
+
+- alias: Alarm - ARM when family leaves
+  id: alarm.arm_when_home_empty
+  trigger:
+    platform: state
+    entity_id: group.family
+    from: home
+  condition: []
+  action:
+    - service: alarm_control_panel.alarm_arm_away
+      entity_id: alarm_control_panel.alarm
+
+- alias: Alarm - DISARM when family at home
+  id: alarm.arm_when_inhabited
+  trigger:
+    platform: state
+    entity_id: group.family
+    to: home
+  condition: []
+  action:
+  - service: alarm_control_panel.alarm_disarm
+    entity_id: alarm_control_panel.alarm
+
+
+- alias: Alarm - ARMED actions
+  id: alarm.armed_actions
+  description: add any actions for all alarm types (e.g. switch-on camera & notifies)
+  trigger:
+    platform: state
+    entity_id: alarm_control_panel.alarm
+    to:
+      "armed_away"
+  action:
+    - service: notify.notify
+      data:
+        message: "Alarm - ARMED"
+    - service: persistent_notification.create
+      data:
+        notification_id: pnotif.alarm_away_armed
+        message: "Alarm - armed!"
+    - service: switch.turn_on
+      target:
+        entity_id: switch.lumi_lumi_plug_mmeu01_c3318a3c_on_off
+
+- alias: Alarm - DISARMED actions
+  id: alarm.disarmed_actions
+  trigger:
+    platform: state
+    entity_id: alarm_control_panel.alarm
+    to: disarmed
+  action:
+    - service: persistent_notification.dismiss
+      data:
+        notification_id: pnotif.alarm_away_armed
+    - service: switch.turn_off
+      target:
+        entity_id: switch.lumi_lumi_plug_mmeu01_c3318a3c_on_off
+
+
+- alias: Alarm - TRIGGER when sensors change
+  id: alarm.trigger_conditions
+  trigger:
+    - platform: state
+      entity_id: 
+        #group.perimeter_sensors
+        - binary_sensor.lumi_lumi_sensor_motion_occupancy
+        - binary_sensor.lumi_lumi_sensor_motion_b9463306_occupancy
+        - binary_sensor.lumi_lumi_sensor_motion_f3d33206_occupancy
+        - binary_sensor.lumi_lumi_sensor_magnet_d6faaa04_on_off
+        - binary_sensor.lumi_lumi_sensor_magnet_181e0e04_on_off
+        - binary_sensor.lumi_lumi_sensor_magnet_48e6c703_on_off
+        - binary_sensor.lumi_lumi_sensor_magnet_12066204_on_off
+        - binary_sensor.lumi_lumi_sensor_magnet_87186204_on_off
+        - binary_sensor.lumi_lumi_sensor_magnet_30f9aa04_on_off
+        - binary_sensor.lumi_lumi_sensor_magnet_f3046204_on_off
+
+  # condition:
+  #   - condition: state
+  #     entity_id: alarm_control_panel.alarm
+  #     state: armed_away
+  action:
+    service: alarm_control_panel.alarm_trigger
+    target:
+      entity_id: alarm_control_panel.alarm
+
+
+- alias: Alarm - TRIGGERED actions
+  id: alarm.triggered_actions
+  trigger:
+    - platform: state
+      entity_id: alarm_control_panel.alarm
+      to: "triggered"
+  action:
+    - service: notify.notify
+      data:
+        message: "ALARM: >>TRIGGERED<<"
+    - service: persistent_notification.create
+      data:
+        notification_id: pnotif.alarm_away_armed
+        message: "ALARM: >>TRIGGERED2<<"
+ 

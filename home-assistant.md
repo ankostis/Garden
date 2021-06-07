@@ -1,5 +1,7 @@
 # Home Assistant
 
+- [ ] Install Supervised
+  - [ ] MQTT AddOn
 - [x] remote access
   - [x] FIX android access from within my WiFi!
     - [x] proxy with apache (although not SSL for local connections :-)
@@ -9,13 +11,17 @@
   - [x] test they run (mobile: ok, kudos: ??)
 - [x] Zigbee Gateway
   - [x] movement & window sensors
-- [x] presence Tonia: nmap
+- [x] integrate Tonia
+  - [x] presence: nmap, bt
+  - [ ] account, 2FA
+  - [ ] hass-app
 - [x] ONVIF camera,
-  - [ ] PTZ
+  - [ ] PTZ: https://github.com/Gowresh7/V380_Python
+  - [ ] Sound Tx/Rx
   - [ ] block chinese servers
-- [ ] Aqara-cube miss-registered: events missing!
-- [ ] Bluetooth tracker
-- [x] floor map
+- [x] Aqara-cube miss-registered: events missing!? NO
+- [x] Bluetooth tracker
+- [x] install floor map HACS component
   - [ ] produce map with sweethome3d-furniture-nonfree
   - [ ] link css with entities
 - [x] hass-integrate UPS: simply with apcusp "manual" integration
@@ -23,8 +29,10 @@
   - [-] develop own `acpcupsd` integration (based on https://www.home-assistant.io/integrations/apcupsd/)
   - [x] fixed mismatched entities: maxlinev--->HITRANS, minlinev-->LOTRANS, outputv, LASTXFER, NUMXFERS, BATTV
   - [ ] DEV: new  UPS device, to attach all its entities
+ - [ ] integrate Syncthing: https://community.home-assistant.io/t/how-to-integrate-your-s-and-even-make-it-talk/209116
+- [x] radio-stations in chromecasts: https://community.home-assistant.io/t/lovelace-chromecast-radio-jukebox/83867
 - Automation rules:
   - [x] battery-low sensors (from blueprints)
   - [ ] Alarm!!
-    - [ ] group-away does not trigger(?)
+    - [x] zone enter/leave do not trigger with groups- groups miss GPS
 - [ ] DEV: keybase integration
