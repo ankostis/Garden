@@ -175,7 +175,7 @@ alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 ```
 
-### `.inputrc`
+### `.inputrc` fuller
 ```bash
 "\e[A": history-search-backward
 "\e[B": history-search-forward
@@ -187,6 +187,13 @@ alias grep='grep --color=auto'
 "\e\e[C": forward-word
 "\e\e[D": backward-word
 "\C-x\C-r": re-read-init-file
+```
+
+### `.inputrc` ful
+```bash
+$include /etc/inputrc
+"\e[A": history-search-backward
+"\e[B": history-search-forward
 ```
 
 ## MyServices README example:

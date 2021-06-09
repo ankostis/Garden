@@ -20,7 +20,7 @@ Tag-delimiter cannot be dot(`.`) because vscode-foam does not recognise it.
   * H-tool
   * H.help
 
-* `web-tag` `pkdb-...` - Personal Knowledge DataBase & [[web annotations]] (i had called it _"omnisearch"_)
+* `web_tag` `pkdb-...` - Personal Knowledge DataBase & [[web annotations]] (i had called it _"omnisearch"_)
 * `feedback` - textual contribution to a site, call for a fix, a nudge
 * 17N
 * AI

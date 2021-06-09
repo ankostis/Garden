@@ -14,13 +14,14 @@ tags: pkdb promnesia HPI dev
 - [ ] Integrate [Polar Bookshelf](https://github.com/burtonator/) by downloading everything in promnesia DB!
 - [ ] HPI/promnesia extractors PRs:
   - [ ] [promnesia-PR#204 for Viber source](https://github.com/karlicoss/promnesia/pull/204):
-    - [x]  finalize [promnesia-PR#208](https://github.com/karlicoss/promnesia/pull/208)
+    - [x] finalize [promnesia-PR#208](https://github.com/karlicoss/promnesia/pull/208)
     - [ ]  spread into HPI: But _telegram_ source is also promnesia-only!?
-  - [ ] HPI/promnesia PR: Signal extractor:
+  - [x] HPI/promnesia PR: Signal extractor:
     - export code taken from [`carderne/signal-export`](https://github.com/carderne/signal-export)
     - [Allow exporting a backup from Signal Desktop](https://github.com/signalapp/Signal-Desktop/issues/522),
       [Support creating an archive of messages and media (#1013)](https://github.com/signalapp/Signal-Desktop/issues/1013) and
       [Error: Encrypted export/import is disabled (#2516)](https://github.com/signalapp/Signal-Desktop/issues/2516)
+    - [ ] fix signal when `http_only``
   - [ ] HPI/promnesia PR: Disqus extractor
     - Requested GDPR disqus-archive:
       - Archive came back quasi-empty!  Reported, and awaiting reply.

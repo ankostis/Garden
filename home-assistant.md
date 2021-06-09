@@ -11,10 +11,13 @@
   - [x] test they run (mobile: ok, kudos: ??)
 - [x] Zigbee Gateway
   - [x] movement & window sensors
+  - [x] presence:
+    - [x] nmap: DONE, but may DRAIN BATTERIES!
+    - [x] bt
+    - [ ] integrate [my router]()https://github.com/ericpignet/home-assistant-tplink_router (needs development)
 - [x] integrate Tonia
-  - [x] presence: nmap, bt
-  - [ ] account, 2FA
-  - [ ] hass-app
+  - [x] account, 2FA
+  - [x] hass-app
 - [x] ONVIF camera,
   - [ ] PTZ: https://github.com/Gowresh7/V380_Python
   - [ ] Sound Tx/Rx
