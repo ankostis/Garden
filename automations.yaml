@@ -6,65 +6,71 @@
     input:
       threshold: 17
       actions:
-        - service: notify.persistent_notification
-          data:
-            message: 'Sensors with low battery: {{sensors}}'
+      - service: notify.persistent_notification
+        data:
+          message: 'Sensors with low battery: {{sensors}}'
       exclude:
         entity_id: []
         device_id: 60665fd5bae23d06c5b0eb3820d76190
-
-
-- alias: Garden lights - ON after sunset
-  id: garden_lights.on_after_sunset
+- id: garden_lights.on_after_sunset
+  alias: Garden lights - ON after sunset
   trigger:
-    - platform: numeric_state
-      entity_id: sun.sun
-      attribute: elevation
-      below: -4.0
+  - platform: numeric_state
+    entity_id: sun.sun
+    attribute: elevation
+    below: '-4'
+  condition:
+  - condition: device
+    type: is_off
+    device_id: 3245c32441ebf51711db90e12afffbef
+    entity_id: switch.plug_02
+    domain: switch
+    for:
+      minutes: 10
   action:
-    - service: switch.turn_on
-      target:
-        entity_id: switch.lumi_lumi_plug_mmeu01_on_off
-
-- alias: Garden lights - OFF after sunrise
-  id: garden_lights.off_after_sunrise
+  - service: switch.turn_on
+    target:
+      entity_id: switch.plug_02
+  mode: single
+- id: garden_lights.off_after_sunrise
+  alias: Garden lights - OFF after sunrise
   trigger:
-    - platform: numeric_state
-      entity_id: sun.sun
-      attribute: elevation
-      above: -4.0
+  - platform: numeric_state
+    entity_id: sun.sun
+    attribute: elevation
+    above: '-4'
+  condition:
+  - condition: device
+    type: is_on
+    device_id: 3245c32441ebf51711db90e12afffbef
+    entity_id: switch.plug_02
+    domain: switch
+    for:
+      minutes: 10
   action:
-    - service: switch.turn_off
-      target:
-        entity_id: switch.lumi_lumi_plug_mmeu01_on_off
-
-
-## For "cube" actions see:
- #  https://community.home-assistant.io/t/aqara-magic-cube-zha-51-actions/270829
-- alias: Cube - bed light
-  id: cube.bed_light
+  - service: switch.turn_off
+    target:
+      entity_id: switch.plug_02
+  mode: single
+- id: cube.bed_light
+  alias: Cube - bed light
   trigger:
-    - device_id: 0e5445a154a8f2ca88db7cabc8bdf643
-      domain: zha
-      platform: device
-      type: device_rotated
-      subtype: left
-    - device_id: 0e5445a154a8f2ca88db7cabc8bdf643
-      domain: zha
-      platform: device
-      type: device_rotated
-      subtype: right
+  - device_id: 0e5445a154a8f2ca88db7cabc8bdf643
+    domain: zha
+    platform: device
+    type: device_rotated
+    subtype: left
+  - device_id: 0e5445a154a8f2ca88db7cabc8bdf643
+    domain: zha
+    platform: device
+    type: device_rotated
+    subtype: right
   action:
-    - type: toggle
-      device_id: 65bd2a661f896ea9c332a2fad3bd8beb
-      entity_id: switch.lumi_lumi_plug_mmeu01_14458e3c_on_off
-      domain: switch
-
-
-###########
-## ALARM ##
-###########
-
+  - type: toggle
+    device_id: 65bd2a661f896ea9c332a2fad3bd8beb
+    entity_id: switch.plug_03
+    domain: switch
+  mode: single
 - alias: Alarm - ARM when family leaves
   id: alarm.arm_when_home_empty
   trigger:
@@ -73,9 +79,8 @@
     from: home
   condition: []
   action:
-    - service: alarm_control_panel.alarm_arm_away
-      entity_id: alarm_control_panel.alarm
-
+  - service: alarm_control_panel.alarm_arm_away
+    entity_id: alarm_control_panel.alarm
 - alias: Alarm - DISARM when family at home
   id: alarm.arm_when_inhabited
   trigger:
@@ -84,13 +89,11 @@
     to: home
   condition: []
   action:
-    - service: alarm_control_panel.alarm_disarm
-      entity_id: alarm_control_panel.alarm
-    - service: notify.notify
-      data:
-        message: "Alarm - ARMED because family has left {{ trigger.entity_id }}"
-
-
+  - service: alarm_control_panel.alarm_disarm
+    entity_id: alarm_control_panel.alarm
+  - service: notify.notify
+    data:
+      message: Alarm - ARMED because family has left {{ trigger.entity_id }}
 - alias: Alarm - ARMED actions
   id: alarm.armed_actions
   description: add any actions for all alarm types (e.g. switch-on camera & notifies)
@@ -98,17 +101,16 @@
     platform: state
     entity_id: alarm_control_panel.alarm
     to:
-      - "armed_away"
-      - "armed_home"
+    - armed_away
+    - armed_home
   action:
-    - service: persistent_notification.create
-      data:
-        notification_id: pnotif.alarm_away_armed
-        message: "Alarm - ARMED {{ trigger.entity_id }}"
-    - service: switch.turn_on
-      target:
-        entity_id: switch.lumi_lumi_plug_mmeu01_c3318a3c_on_off
-
+  - service: persistent_notification.create
+    data:
+      notification_id: pnotif.alarm_away_armed
+      message: Alarm - ARMED {{ trigger.entity_id }}
+  - service: switch.turn_on
+    target:
+      entity_id: switch.plug_01
 - alias: Alarm - DISARMED actions
   id: alarm.disarmed_actions
   trigger:
@@ -116,87 +118,123 @@
     entity_id: alarm_control_panel.alarm
     to: disarmed
   action:
-    - service: persistent_notification.dismiss
-      data:
-        notification_id: pnotif.alarm_away_armed
-    - service: switch.turn_off
-      target:
-        entity_id: switch.lumi_lumi_plug_mmeu01_c3318a3c_on_off
-
-
+  - service: persistent_notification.dismiss
+    data:
+      notification_id: pnotif.alarm_away_armed
+  - service: switch.turn_off
+    target:
+      entity_id: switch.plug_01
 - alias: Alarm - TRIGGER & notify whenever perimeter sensors change
   id: alarm.trigger_conditions
   mode: queued
   trigger:
-    - platform: state
-      entity_id: 
-        #- group.perimeter_sensors # NO, does not change state collectively!
-        - binary_sensor.lumi_lumi_sensor_motion_ias_zone
-        - binary_sensor.lumi_lumi_sensor_magnet_d6faaa04_on_off
-        - binary_sensor.lumi_lumi_sensor_magnet_181e0e04_on_off
-        - binary_sensor.lumi_lumi_sensor_magnet_48e6c703_on_off
-        - binary_sensor.lumi_lumi_sensor_magnet_12066204_on_off
-        - binary_sensor.lumi_lumi_sensor_magnet_87186204_on_off
-        - binary_sensor.lumi_lumi_sensor_magnet_30f9aa04_on_off
-        - binary_sensor.lumi_lumi_sensor_magnet_f3046204_on_off
+  - platform: state
+    entity_id:
+    - binary_sensor.lumi_lumi_sensor_motion_ias_zone
+    - binary_sensor.lumi_lumi_sensor_magnet_d6faaa04_on_off
+    - binary_sensor.lumi_lumi_sensor_magnet_181e0e04_on_off
+    - binary_sensor.lumi_lumi_sensor_magnet_48e6c703_on_off
+    - binary_sensor.lumi_lumi_sensor_magnet_12066204_on_off
+    - binary_sensor.lumi_lumi_sensor_magnet_87186204_on_off
+    - binary_sensor.lumi_lumi_sensor_magnet_30f9aa04_on_off
+    - binary_sensor.lumi_lumi_sensor_magnet_f3046204_on_off
   condition:
-    - condition: state
-      entity_id: alarm_control_panel.alarm
-      state: 
-        - armed_away
-        - armed_home
-        - triggered
+  - condition: state
+    entity_id: alarm_control_panel.alarm
+    state:
+    - armed_away
+    - armed_home
+    - triggered
   action:
-    - service: alarm_control_panel.alarm_trigger
-      target:
-        entity_id: alarm_control_panel.alarm
-    - service: notify.notify
-      data:
-        message: "ALARM: {{ trigger.entity_id }} TRIPPED!"
-    - service: notify.web_push
-      data:
-        message: "ALARM: {{ trigger.entity_id }} TRIPPED!"
-
-
+  - service: notify.notify
+    data:
+      message: 'ALARM: {{ trigger.entity_id }} TRIPPED!'
+  - service: notify.web_push
+    data:
+      message: 'ALARM: {{ trigger.entity_id }} TRIPPED!'
+  - service: alarm_control_panel.alarm_trigger
+    target:
+      entity_id: alarm_control_panel.alarm
 - alias: Alarm - SCREAM on outside motion
   id: alarm.scream_when_armed
   mode: queued
   trigger:
-    - platform: state
-      entity_id: 
-        - binary_sensor.lumi_lumi_sensor_motion_b9463306_ias_zone
-        - binary_sensor.lumi_lumi_sensor_motion_f3d33206_ias_zone
-      to: 'on'
+  - platform: state
+    entity_id:
+    - binary_sensor.lumi_lumi_sensor_motion_b9463306_ias_zone
+    - binary_sensor.lumi_lumi_sensor_motion_f3d33206_ias_zone
+    - binary_sensor.magnet_08
+    to: 'on'
   condition:
-    - condition: state
-      entity_id: alarm_control_panel.alarm
-      state: 
-        - armed_away
-        - armed_home
-        - triggered
+  - condition: state
+    entity_id: alarm_control_panel.alarm
+    state:
+    - armed_away
+    - armed_home
+    - triggered
   action:
-    - service: notify.notify
-      data:
-        message: "ALARM: outside motions {{ trigger.entity_id }}"
-    - service: notify.web_push
-      data:
-        message: "ALARM: outside motions {{ trigger.entity_id }}"
-
+  - service: notify.notify
+    data:
+      message: 'ALARM: outside motions {{ trigger.entity_id }}'
+  - service: notify.web_push
+    data:
+      message: 'ALARM: outside motions {{ trigger.entity_id }}'
 - alias: Alarm - TRIGGERED actions
   id: alarm.triggered_actions
   trigger:
-    - platform: state
-      entity_id: alarm_control_panel.alarm
-      to: "triggered"
-  action: 
-    - service: notify.notify
-      data:
-        message: "ALARM: {{ trigger.entity_id }} >>TRIGGERED<< "
-    - service: notify.web_push
-      data:
-        message: "ALARM: {{ trigger.entity_id }} >>TRIGGERED<< "
-    - service: persistent_notification.create
-      data:
-        notification_id: pnotif.alarm_triggered
-        message: "ALARM: {{ trigger.entity_id }} >>TRIGGERED<< "
+  - platform: state
+    entity_id: alarm_control_panel.alarm
+    to: triggered
+  action:
+  - service: notify.notify
+    data:
+      message: 'ALARM: {{ trigger.entity_id }} >>TRIGGERED<< '
+  - service: notify.web_push
+    data:
+      message: 'ALARM: {{ trigger.entity_id }} >>TRIGGERED<< '
+  - service: persistent_notification.create
+    data:
+      notification_id: pnotif.alarm_triggered
+      message: 'ALARM: {{ trigger.entity_id }} >>TRIGGERED<< '
+- id: motion_light_frontdoor
+  alias: Motion-light Frontdoor
+  trigger:
+  - entity_id: binary_sensor.lumi_lumi_sensor_motion_b9463306_occupancy
+    platform: state
+    to: 'off'
+    for: 00:00:33
+  - entity_id: binary_sensor.lumi_lumi_sensor_motion_b9463306_occupancy
+    platform: state
+    to: 'on'
+  condition:
+  - condition: numeric_state
+    entity_id: sun.sun
+    attribute: elevation
+    below: '-4'
+  action:
+  - service: switch.turn_{{ trigger.to_state.state }}
+    target:
+      entity_id: switch.wallswitch_02
+  mode: single
 
+- id: motion_light_backdoor
+  alias: Motion-light Backdoor
+  description: ''
+  trigger:
+  - entity_id: binary_sensor.lumi_lumi_sensor_motion_f3d33206_ias_zone
+    platform: state
+    to: 'on'
+  - entity_id: binary_sensor.lumi_lumi_sensor_motion_f3d33206_ias_zone
+    platform: state
+    to: 'off'
+    for: 00:00:33
+  condition:
+  - condition: numeric_state
+    entity_id: sun.sun
+    attribute: elevation
+    below: '-4'
+  action:
+  - service: switch.turn_{{ trigger.to_state.state }}
+    target:
+      entity_id: switch.wallswitch_01
+  mode: single
