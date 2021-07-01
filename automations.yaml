@@ -130,7 +130,7 @@
   trigger:
   - platform: state
     entity_id:
-    - binary_sensor.lumi_lumi_sensor_motion_ias_zone
+    - binary_sensor.motion_01_ias_zone
     - binary_sensor.lumi_lumi_sensor_magnet_d6faaa04_on_off
     - binary_sensor.lumi_lumi_sensor_magnet_181e0e04_on_off
     - binary_sensor.lumi_lumi_sensor_magnet_48e6c703_on_off
@@ -161,8 +161,8 @@
   trigger:
   - platform: state
     entity_id:
-    - binary_sensor.lumi_lumi_sensor_motion_b9463306_ias_zone
-    - binary_sensor.lumi_lumi_sensor_motion_f3d33206_ias_zone
+    - binary_sensor.motion_02_ias_zone
+    - binary_sensor.motion_03_ias_zone
     - binary_sensor.magnet_08
     to: 'on'
   condition:
@@ -199,11 +199,11 @@
 - id: motion_light_frontdoor
   alias: Motion-light Frontdoor
   trigger:
-  - entity_id: binary_sensor.lumi_lumi_sensor_motion_b9463306_occupancy
+  - entity_id: binary_sensor.motion_02_ias_zone
     platform: state
     to: 'off'
     for: 00:00:33
-  - entity_id: binary_sensor.lumi_lumi_sensor_motion_b9463306_occupancy
+  - entity_id: binary_sensor.motion_02_ias_zone
     platform: state
     to: 'on'
   condition:
@@ -221,10 +221,10 @@
   alias: Motion-light Backdoor
   description: ''
   trigger:
-  - entity_id: binary_sensor.lumi_lumi_sensor_motion_f3d33206_ias_zone
+  - entity_id: binary_sensor.motion_03_ias_zone
     platform: state
     to: 'on'
-  - entity_id: binary_sensor.lumi_lumi_sensor_motion_f3d33206_ias_zone
+  - entity_id: binary_sensor.motion_03_ias_zone
     platform: state
     to: 'off'
     for: 00:00:33

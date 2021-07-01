@@ -30,9 +30,8 @@
 - [x] ONVIF camera,
   - [x] PTZ: https://github.com/Gowresh7/V380_Python
     eventually fixed when upgraded to hass-2021.6.4 (or was never broken!)
-    and added PTZ card
+    and addeduPTZ card from WebRTC: https://pythonrepo.com/repo/AlexxIT-WebRTC-python-video
   - [ ] Sound Tx/Rx
-    - [ ] Rx: WebRTC: https://pythonrepo.com/repo/AlexxIT-WebRTC-python-video
   - [ ] block chinese servers
 - [x] install floor map HACS component
   - [ ] produce map with sweethome3d-furniture-nonfree
