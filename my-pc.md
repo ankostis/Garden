@@ -8,3 +8,4 @@ tags: dev
 - [ ] etckeeper -> keybase
 - [ ] setup `VodafoneTV` & `RadioDroid` in android-box `anbox`
   - [x] installed `anbox` from `snap`
+- Bind euro-sign(€) into keyboard

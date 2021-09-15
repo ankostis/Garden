@@ -27,5 +27,5 @@
   "vscodeMarkdownNotes.slugifyMethod": "github-slugger",
   "window.autoDetectColorScheme": true,
   "restructuredtext.confPath": "",
-  "python.pythonPath": ".venv/bin/activate",
+  "python.pythonPath": ".$HOME/Work/Garden.git/.venv/bin/activate",
 }
