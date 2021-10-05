@@ -1,3 +1,7 @@
+---
+type: tool
+tags: hass home my_IT
+---
 # Home Assistant
 
 ## Done

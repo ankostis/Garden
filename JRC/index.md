@@ -1,6 +1,6 @@
 ---
 type: index
-tags: jobs.JRC
+tags: jobs/JRC
 ---
 
 # JRC
