@@ -10,6 +10,7 @@ I do read constantly: cosmology, math, physics, biology, philosophy, history, po
 - [ankostis@Twitter](https://twitter.com/ankostis) - (Dec 2008)
 - [ankostis@GitHub](https://github.com/ankostis) - (Nov 2010)
 - [ankostis@StackExchange](https://stackoverflow.com/users/548792/ankostis?tab=profile) - (Dec 2010)
+- [ankostis@GitLab](https://gitlab.com/ankostis) - (Jan 2010)
 - [ankostis@keybase.io](https://keybase.io/ankostis) - (Dec 2016)
 - [ankostis@libretooth.gr](https://libretooth.gr/@ankostis) - (mastodon, Nov 2018)
 - [ankostis@Hypothes.is](https://hypothes.is/users/ankostis) - (Jan 2021) my web-annotations
