@@ -1,0 +1,109 @@
+# EC Modelling conferences
+
+## 2019 conference
+
+- conference date: 26 Nov 2019
+- link: [Supporting policy with scientific evidence](https://knowledge4policy.ec.europa.eu/event/eu-conference-modelling-policy-support-experiences-challenges-way-ahead_en)
+- Plenary session 1 - 26 November
+  - Use of global models for policy recommendations by M. Wörsdörfer
+- Model Transparency and sensitivity analysis
+  - The challenge of achieving modelling transparency for policy makers by R. A. Rosen
+  - It started with a KISS: making complex modelling accessible, transparent and understandable by A. Caivano
+  - Knowing unknowns: adapting uncertainty and sensitivity analysis for impact assessment and policy-making by W. Becker
+  - What has global sensitivity analysis ever done for us? A systematic review to inform policymaking through earth system modelling by F. Pianosi
+- Scenarios, model linkages and data for policy 1
+  - Assessing the costs of EU truck CO2 targets with DIONE and VECTO models by J. Krause
+  - Energy systems modelling: toolbox development for policy decision support by E. Delarue
+  - Macroeconomic effects of EU energy efficiency regulations on household dishwashers, washing machines and washer dryers by P. Rocchi
+  - A food safety impact modelling system by A. Bubico
+  - The marine modelling framework of the EU Commission. A earth-system model for supporting policy decisions by R. Friedland
+  - Combining micro and macro simulations to assess the distributional impacts of energy transitions. Evidences from the French national low carbon strategy by E. Ravigné
+  - Energy security assessment framework to support energy policy decisions by L. Martišauskas
+  - Decarbonising transports in Portugal up to 2050: possible pathways by H. Tente
+  - Modelling the macroeconomic and employment Impacts of future mobility disruption Scenarios by J. Krause
+  - Global trends of methane emissions and their impacts on ozone concentrations by R. Van Dingenen
+  - Combining graphical and command line user interfaces for economic analysis: the capriR package for processing, visualizing and analysing large sets of simulation results by M. Himics
+  - Wildfire modelling for adaptation policy options in Europe by A. Krasovskii
+- Complex system modelling and multi-criteria decision making 1
+  - An accounting framework for the biophysical profiling of the European agricultural system by J. J. Cadillo Benalcazar
+  - Integrative planning for a sustainable, prosperous future by W. Urantowka
+  - Methodological reflections on the European Commissions’ 2013 use of CBA for air pollution policy by S. Åström
+  - Making sustainability models more robust: dealing with the complexity of the metabolic pattern of social-ecological systems by M. Giampietro
+- Model quality and transparency 1
+  - Challenges and opportunities of integrated policy modelling by L. Hordijk
+  - Modelling for EU Policy Support: Impact Assessments by S. Acs
+  - From modelling guidelines to model portfolio management by T. Arnold
+  - Post-hoc evaluation of model outcomes tailored to policy support by H. H. Thulke
+  - EC Modelling Inventory and Knowledge Management System MIDAS by N. Ostlaender
+  - Map or compass? Improving model contribution to long-term climate strategy. Insights from 4 country studies by C. Cassen
+  - Analysis of current climate and energy policies: are countries on track to meet their NDC targets? by M. den Elzen
+  - How to make social-environmental modelling more useful to support policy? by M. Will
+  - Quantitative pest risk assessment – a modelling methodology supporting EU plant health policy by M. Pautasso
+- Integrated assessment modelling
+  - Lessons from the use of the GAINS model to inform clean air policies in Europe by M. Amann
+  - Science for an evolved Common Agricultural Policy – the Scenar 2030 experience by R. M'Barek
+  - Examples of Europe’s marine ecosystem modelling capability for societal benefit by S. Heymans
+  - Multi-Objective Local Environmental Simulator (MOLES): model specification,algorithm design and policy applications by I. Tikoudis
+  - Physiologically based kinetic modelling - a bridge between biological science and public health policy by A. Paini
+- Qualitative and quantitative modelling
+  - Integrating qualitative scenarios with quantitative modelling: lessons learned from recent EC foresight projects by A. Ricci
+  - Modelling stakeholders knowledge and requirements on soil multifunctionality across EU by F. Bampa
+- Integrated modeling: the case of the Food-water-energy-environmental NEXUS management under uncertainty and risks
+  - A strategic decision–support system for strategic robust adaptation to climate change and systemic risks in land use systems: Stochastic integrated assessment GLOBIOM model by T. Ermolieva
+  - An integrated environmental-economic model for robust pollution control under uncertainty by T. Emolieva
+  - Policy impact on biofuel or electricity production from biomass in Europe by S. Leduc
+  - Robust food-energy-water-environmental security management: linking distributed sectorial and regional models by Y. Emoliev
+- Modelling value chains in global trade
+  - MAGNET - a team-based modular CGE approach for coherent cross-cutting policy assessments by M. Kuiper
+  - Modelling fairness in FVCs: developing quantitative indicators by S. Bogason
+- Poster session 1 - 26 November
+  - A participatory process to design regional policy for rural development: the case of the Veneto Region by S. Trestini
+- Plenary session 2 - 27 November
+  - Assessing social impacts of policies: indicators and methods by K. Jacob
+- Engaging stakeholders and policy makers
+  - Complex modelling to achieve carbon neutrality in Portugal by P. Fortes
+  - The importance of modelling purpose for policy by B. Edmonds
+- Modelling support for EU policy design: the EU’s Long Term Strategy for climate
+  - Developing a global context for regional 1.5°C scenarios by K. Keramidas
+  - The land use sector as key to offset residual emissions by 2050 by S. Frank
+  - Socio-economic aspects of EU decarbonisation by B. Saveyn
+- Computational and empirical issues in dynamic economy-wide models
+  - Using the Global Multi-country model in ECFIN’s forecast exercises by M. Ratto
+  - Stationary rational bubbles in non-linear macroeconomic policy models by R. Kollmann
+  - The macroeconomic and sectoral impact of EU competition policy by A. Dierx
+  - Direct and indirect impacts of European Institute of Innovation and Technology (EIT) investments on regional economic growth by O. Ivanova
+  - Modelling the labour market and agricultural sector in an integrated CGE framework: an application to the Brexit case by S. Angioloni
+- Poster session 2 - 27 November
+  - Assessing the value of regional cooperation in air pollution control by E. De Angelis
+  - Managing Variations in the European Electricity System with Biomass: Emission Targets and Investment Preferences by M. Lehtveer
+    Evaluating economic, health impacts and carbon footprint of air quality policies by E. De Angelis
+
+## 2021 conference
+
+- conference date: 22 Nov 2021
+- link: [EU Conference on Modelling for Policy support: Experiences, challenges and the way ahead](https://knowledge4policy.ec.europa.eu/event/2021-eu-conference-modelling-policy-support-collaborating-across-disciplines-tackle-key_en)
+- Keynote 1: Modelling for the emergency: the Earth4All experience
+- Session 1 : Ensuring model quality
+- Session 2 : Transparency of models and their use
+- Contributed session 1: Co-design of modelling-based services for climate change adaptation related policy support under the EU DestinE Initiative
+- Workshop 1: Leveraging multidisciplinary tools and approaches for achieving the SDGs
+- Keynote 2: Economic models and the COVID-19 pandemic
+- Session 3 : Scenarios and data
+- Training 1: Social multi-criteria evaluation (SMCE) for ex-ante impact assessments
+- Workshop 2: We need to talk about models
+- Workshop 3: Strategic Foresight and quantification link for better future-oriented policymaking
+- Keynote 3: Modelling tools for policy support in (real) time of crisis
+- Session 4 : Modelling complex systems for policy
+- Session 5 : Assessing and communicating uncertainty in model results
+- Contributed session 2: Modelling for the Banking Union
+- Workshop 4: Human models for human policies
+- Session 6 : Multidisciplinary approaches, integrated assessment and model linkages
+- Session 7 : Using model related evidence for policy: processes and experiences
+- Training 2: An introduction to SIML@B: an online EC tool for global sensitivity analysis of models
+- Contributed session 3: Climate change adaptation modelling as a key support tool for evidence-based policies in a time of planetary crisis
+- Workshop 5: Impact By Design: How to create social science models that effectively address policy needs?
+- Concluding session : Modelling for policy, main messages and the way forward
+- Session 8 : Combination of qualitative and quantitative methods
+- Session 9 : Communication and visualisation of model results
+- Contributed session 4: Highlights from the EU Open Data Days: how open data can support policy-making
+- Workshops and trainings
