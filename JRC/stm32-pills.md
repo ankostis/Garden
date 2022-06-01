@@ -51,4 +51,8 @@
 
 - effort: 0.2
 - [x] Locate [BlakMagic --> BlackPill guide](https://github.com/koendv/blackmagic-blackpill/blob/main/README_DEVELOPER.md)!!!
-  - [ ] apply BlakMagic --> BlackPill guide
+  - [x] apply BlakMagic --> BlackPill guide
+  - [ ] install gcc toolchain
+    - [-] `sudo apt install gcc-arm-none-eabi gdb-arm-none-eabi`
+  - [ ] download them from https://developer.arm.com/tools-and-software/open-source-software/developer-tools/gnu-toolchain/downloads
+

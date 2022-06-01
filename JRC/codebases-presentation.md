@@ -20,7 +20,8 @@
 
 #### Absolute paths
 
-* defaults must be relative (bad sample: https://github.com/JRCSTU/co2mpas_driver/blob/master/co2mpas_driver/images/load.png)
+- defaults must be relative (bad sample: https://github.com/JRCSTU/co2mpas_driver/blob/master/co2mpas_driver/images/load.png)
+- `Pathlib`
 
 #### Resources
 
