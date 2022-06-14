@@ -1,9 +1,52 @@
 # STM32 pills
 
-## 27 May 2022
-
+![BlackPill-WeAct-v1.2](../attachments/BlackPill-WeAct-v1.2.png)
 - My x2 black-pill-I come from [WeActTogether](https://github.com/WeActTC/MiniSTM32F4x1)
   as seen from USB-IDs in the logs when connectin them.
+- [Registered in STM32-base boards](https://stm32-base.org/boards/STM32F401CCU6-WeAct-Black-Pill-V1.2.html)
+- Board
+  - Name: WeAct Black Pill V1.2
+  - Part: Unknown
+  - Brand: WeAct Studio
+  - Origin: China
+- Microcontroller
+  - Part: STM32F401CCU6
+  - Manufacturer: ST-Microelectronics
+  - Core: Arm Cortex-M4
+  - Max. Clock Speed: 84MHz
+  - Package: UFQFPN 48 pins
+- Internal memories
+  - FLASH: 256KiB
+  - SRAM: 64KiB
+- Oscillators:
+  - HSI: 16MHz
+  - LSI: 32kHz
+  - HSE: 25MHz
+  - LSE: 32.768kHz
+- Power:
+  - Sources:
+  - Any: +3.3V pin (+3.3V)
+  - Any: +5V pin (+5V)
+  - USB: connector (+5V)
+  - VDDA pin: No
+  - VSSA pin: No
+  - VREF- pin: No
+  - VREF+ pin: No
+  - Backup battery: Pin
+- Regulator:
+  - Manufacturer: Diodes Incorporated
+  - Part: AP7343 (6T)
+  - Package: X2-DFN1010-4 4 pins
+  - Input: +3.52V to +5.25V
+  - Output: +3.3V @ 300mA
+  - Datasheet: AP7343.pdf
+- PCB:
+  - Color: Black
+  - Size (w x l): 20.78mm x 52.81mm
+  - Mounting: Breadboard
+
+## 27 May 2022
+
 - [Blue vs Black pills](https://hackaday.com/2021/01/20/blue-pill-vs-black-pill-transitioning-from-stm32f103-to-stm32f411/)
   with many resources
 - [Black-magic fw --> blue-pill](https://satoshinm.github.io/blog/171223_jtagswdpillblink_jtagswd_debugging_via_black_magic_probe_on_an_stm32_blue_pill_and_blinking_a_led_using_stm32cubemx_libopencm3_and_bare_metal_c.html)
@@ -52,7 +95,50 @@
 - effort: 0.2
 - [x] Locate [BlakMagic --> BlackPill guide](https://github.com/koendv/blackmagic-blackpill/blob/main/README_DEVELOPER.md)!!!
   - [x] apply BlakMagic --> BlackPill guide
-  - [ ] install gcc toolchain
-    - [-] `sudo apt install gcc-arm-none-eabi gdb-arm-none-eabi`
-  - [ ] download them from https://developer.arm.com/tools-and-software/open-source-software/developer-tools/gnu-toolchain/downloads
+  - [x] responded to [issue#1  begging for MRs to upstream](https://github.com/koendv/blackmagic-blackpill/issues/1#issuecomment-1143968448)
+- [ ] install **ARM gcc/gdb toolchain**
+  - [-] `sudo apt install gcc-arm-none-eabi gdb-arm-none-eabi`
+    DOES NOT FETCH ANY GDB!!
+- [x] download them from https://developer.arm.com/tools-and-software/open-source-software/developer-tools/gnu-toolchain/downloads
+  both are missing depends on libpython-3.6
+  - [x] `gcc-arm-11.2-2022.02-x86_64-arm-none-linux-gnueabihf.tgz`
+  - [x] [install Python3.6 from deadsnakes](https://unix.stackexchange.com/a/188819/156357)
+- [ ] build them from sources
 
+## Jun 1 2022
+
+- effort: 1
+- [ ] OpenOCD --> BlackMagic
+  - [ ] [someone had attempted this](https://github.com/blackmagic-debug/blackmagic/issues/570)
+    and was promising (eg debug RTOS threads)...But need re-compile both MBP & OpenOCD.
+    - [ ] Have to [build a special OpenOCD](https://github.com/walmis/openocd-blackmagic/)
+      instead of cloning [original repo](https://review.openocd.org/q/blackmagic)
+      BUILD FAILS [reported as #3](https://github.com/walmis/openocd-blackmagic/issues/3)
+    - [x] probably [changes](https://github.com/walmis/blackmagic) already incorporated in blackmagic
+    - file [issue#2 begging for MRs to upstream](https://github.com/walmis/openocd-blackmagic/issues/2)
+    - file [issue#570 beg also on announce issue](https://github.com/blackmagic-debug/blackmagic/issues/570#issuecomment-1145722893)
+- [x] GDB --> BlackMagic
+  - [x] follow [Usefull GDB commands](https://github.com/blackmagic-debug/blackmagic/wiki/Useful-GDB-commands)
+- [ ] [PlatformIO --> BlackMagic](https://docs.platformio.org/en/stable/plus/debug-tools/blackmagic.html)
+  - [ ] [board: STM32F401CC](https://docs.platformio.org/en/stable/boards/ststm32/genericSTM32F401CC.html)
+  - [ ] [debug pre-built ELF without building+uploadin](https://community.platformio.org/t/attach-debugger-to-running-program-without-reset/18285)
+- [ ] CubIDE -> BlackMagic
+- [ ] How to [re-install original WeCanAct BlackPill-1 firmware?](https://github.com/WeActTC/MiniSTM32F4x1/issues/8#issuecomment-627926032)
+- Alternative BluePill firmware (discovered from reddit, abandoned since 2016):
+  [Versaloon Programmer (VSProg)](https://github.com/zoobab/versaloon)
+- [OpenOCD+BMP use-case?](https://www.google.com/search?client=firefox-b-d&q=openocd+black-magic)
+
+## Jun 2 2022
+
+- effort: 0.4
+- [x] [WeActTC/MiniSTM32F4x1#37 asked source-code of WeAct fw](https://github.com/WeActTC/MiniSTM32F4x1/issues/37)
+- [ ] try to dump orginal's black-pill fw as training
+- [Bluepill debug session post](https://devzone.nordicsemi.com/nordic/nordic-blog/b/blog/posts/flashing-and-debugging-nrf5152-with-a-cheap-blackm)
+
+## Jun 3 2022
+
+- work on OpenOCD + Blackpill
+
+## Jun 4 2022
+
+- work on PlatfomIO + Blackpill
