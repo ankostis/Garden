@@ -47,6 +47,7 @@
 
 ## 27 May 2022
 
+- effort: 0.5 (ACC 2022MAY)
 - [Blue vs Black pills](https://hackaday.com/2021/01/20/blue-pill-vs-black-pill-transitioning-from-stm32f103-to-stm32f411/)
   with many resources
 - [Black-magic fw --> blue-pill](https://satoshinm.github.io/blog/171223_jtagswdpillblink_jtagswd_debugging_via_black_magic_probe_on_an_stm32_blue_pill_and_blinking_a_led_using_stm32cubemx_libopencm3_and_bare_metal_c.html)
@@ -92,7 +93,7 @@
 
 ## 28 May 2022
 
-- effort: 0.2
+- effort: 0.2 (ACC 2022MAY)
 - [x] Locate [BlakMagic --> BlackPill guide](https://github.com/koendv/blackmagic-blackpill/blob/main/README_DEVELOPER.md)!!!
   - [x] apply BlakMagic --> BlackPill guide
   - [x] responded to [issue#1  begging for MRs to upstream](https://github.com/koendv/blackmagic-blackpill/issues/1#issuecomment-1143968448)
