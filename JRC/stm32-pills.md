@@ -108,7 +108,7 @@
 
 ## Jun 1 2022
 
-- effort: 1
+- effort: 1 (ACC 2022JUN)
 - [ ] OpenOCD --> BlackMagic
   - [ ] [someone had attempted this](https://github.com/blackmagic-debug/blackmagic/issues/570)
     and was promising (eg debug RTOS threads)...But need re-compile both MBP & OpenOCD.
@@ -131,7 +131,7 @@
 
 ## Jun 2 2022
 
-- effort: 0.4
+- effort: 0.4 (ACC 2022JUN)
 - [x] [WeActTC/MiniSTM32F4x1#37 asked source-code of WeAct fw](https://github.com/WeActTC/MiniSTM32F4x1/issues/37)
 - [ ] try to dump orginal's black-pill fw as training
 - [Bluepill debug session post](https://devzone.nordicsemi.com/nordic/nordic-blog/b/blog/posts/flashing-and-debugging-nrf5152-with-a-cheap-blackm)
