@@ -14,10 +14,12 @@
 
 #### Python install
 
-* pip install:
-  * develope
-  * from github
-
+- pip install:
+  - develope
+  - from github
+- [python env & pip install](https://blog.viraptor.info/post/python-dependency-management-difficulty-is-an-unhelpful-meme)
+- https://peps.python.org/pep-0582/
+  
 #### Absolute paths
 
 - defaults must be relative (bad sample: https://github.com/JRCSTU/co2mpas_driver/blob/master/co2mpas_driver/images/load.png)
