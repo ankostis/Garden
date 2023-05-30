@@ -1,7 +1,7 @@
 # Sto Kokkino
 
-* contact: info@stokokkino.gr
-* phone: +30 210 3217777
+- contact: info@stokokkino.gr
+- phone: +30 210 3217777
 
 ## Phone-call
 
@@ -13,7 +13,15 @@
   - [ ] do you maintain e-lists of Media violations (& lists of any kind)?
 - [ ] give for free (CC-license) for politicL jingles
 - [ ] don't lough against rousfeti & crime (e.g. re-hiring university Guards)
+
 ### 21 Sep 2022
+
 - [ ] interviwieng strong oponents: form a team, use twitter-crowd
 - [x] pension: redistributable, not "%1 returned"
 - [x] rich people can't be Revolutionaries
+
+### 25 May 2023
+
+- γνωριμια, τι ψηφιζα?
+- δημοσκοπικες που να εμπιστευομαστε?
+- ποινικη ρητρα
