@@ -2,22 +2,25 @@
 
 ## legend:
 
-- advice: yellow-StickIt + bottom-right
-- comment: red-cloud + top-right
-- note: blue-cloud + center
 - root-level: section-title
 - indented-level: one of advice, note, comment
+  - advice: yellow-StickIt + bottom-right
+  - comment: red-cloud + top-right
+  - note: blue-cloud + center
+
+§
 
 ## Contents
 
-- 00:30: **(1)** @@@ IDE: install LiveShare plugin
-  - 02:35: @@@ IDE: liveShare experiments
-  - 03:55: @@@ IDE: regex for navigating in the code
+- 00:30: **(1)** IDE: install LiveShare plugin
+  - 01:02: IDE: LiveShare not FOSS
+  - 03:50: @@@ IDE: LiveShare installed
+  - 04:05: act: navigate code with regexes
     - 04:32: ...advice: regexes are nice
   - 04:53: ...advice(IDE): vscode has ScreenCast mode
-  - 05:58: @@@ Typing-hints for args
+  - 05:58: act: Typing-hints for args
     - 06:10: ...advice(code): fix styling & LoCs widths with black formatter
-    - 06:36: @@@ ...comment(IDE): "where am i?  i need bookmarks in the code!"
+    - 06:36: ...comment(IDE): "where am i?  i need bookmarks in the code!"
 - 07:13: **(2)** @@@ prepare styling & sort & fix (missing) imports
     - 07:34: @@@ ...note(IDE): numba is missing from `setup.cfg` dependencies
     - 07:52: @@@ ...[numba+numpy advice](https://numba.pydata.org/numba-doc/dev/reference/numpysupported.html)
@@ -39,15 +42,15 @@
     - 15:30: Config VSCode Zen mode visible UI elements
     - 16:15: @@@ ...comment(IDE) tooling is important
     - 16:38: ...advice(IDE): VSCode + PyChar command pallet shortcuts (REPEATED)
-- 16:50: **(3)** Start Vectorizing outer loop
+- 16:50: **(§3)** Start Vectorizing outer loop
   - 18:20: commit(2): vectorize outer loop
-- 18:58: **(4)** Demeter Law for testable APIs
+- 18:58: **(§4)** Demeter Law for testable APIs
   - 19:21: note(git) ...announce reshufling of vectorization commit after TC.
   - 24:15: @@@ ...note(git): if future unit-test were to discover any bug....
     the fix would be squashed with this commit.
   - 24:22: commit(3): Demeter's Law
   - 24:48: advice(git): commit message widths
-- 26:01: **(5)** Start PyTesting
+- 26:01: **(§5)** Start PyTesting
   - 26:38: setup.cfg testing dependencies
   - 27:05: @@@ fixture: dumy dataframe as input
   - 27:11: ...advice(test): fixtures are good
@@ -85,7 +88,7 @@
         due to many pre-existing errors
       - 54:43: @@@ advice(test): doctest mixes documentation with unit-testing,
         which if checked regularly, serves as an API call example code.
-- 57:50: **(6)** fix module import errors
+- 57:50: **(§6)** fix module import errors
   - 58:28: advice(test): a new Python interpeter facilitates debugging import errors
   - 1:00:27: @@@ advice(imports) 3 different import syntaxes:
     - import a_package.a_module as foo
@@ -122,18 +125,18 @@
     - 1:19:13: git aliases for bash
     - 1:20:23: note: bookmarks & terminal misshups
     - 1:20:40: explain git-reset
-- 1:22:11: **(7)** Pytest part-2: seatbelt construction
+- 1:22:11: **(§7)** Pytest part-2: seatbelt construction
   - 1:25:32: @@@ advice(code) always use `pathlib` for path manipulations
   - 1:26:38: Auto-organize imports on VSCode
   - 1:29:40: @@@ Recommence pytest
-  - 1:30:07: pathlib manipulations
+  - 1:30:07: code: pathlib manipulations
     - 1:29:40: advice(code) pathlib manipulations
   - 1:30:58: advice(data) accuracy-preserving file formats
   - 1:33:29: advice(data) union-typing supported by Python3.10
   - 1:35:42: advice(data) prefer defaults are false, OR stick to your convention
   - 1:41:00: Post-mortem debugging with pytest
   - 1:45:20: commit(6): seatbelt commit
-- 1:47:15: **(8)** @@ git-knit(2) fixup style changes & rewrite
+- 1:47:15: **(§8)** @@ git-knit(2) fixup style changes & rewrite
   - 1:50:00: @@ git-knit(4) resolve conflicts while reshuffling
     - 1:50:45: Demeter Law, 2nd take
     - 1:52:02: advice(git) program in time needs disciplined commits
@@ -142,7 +145,7 @@
     - 1:54:58: advice(git) tip: read the git-rebase prompt at the terminal to understand which changes needs to go
   - 1:59:57: reshuffle: preparing 2nd conflict-resolved commit
   - 2:02:56: Programming in time
-- 2:05:27: **(9)** @@ Chapter:Seatbelt finds vectorization BUG
+- 2:05:27: **(§9)** @@ Chapter:Seatbelt finds vectorization BUG
   - 2:09:36: @@ git-knit(5): fixup timings into TC commit
   - 2:10:29: Study Vectorization BUG with git-diff
   - 2:12:33: LiveShare woes when git diffing
@@ -158,7 +161,7 @@
     ...but actually it took another +25min for the sesion to end!
   - 2:27.31: ...insist on 1h-->36κ rows!!!
   - 2:29:20: ...TC generates 2^15--32k rows, not 2^14
-- 2:30:20: **(10)** REFACT common code in temporary variable
+- 2:30:20: **(§10)** REFACT common code in temporary variables
   - 2:31:12: Auto-save enabled by user-prefs
   - 2:31:49: Continue REFACT extracting temp-vars (inner loop `heights_ratio`)
   - 2:33:10: Continue REFACT extracting temp-vars (v-veh in kmh)
@@ -177,7 +180,7 @@
   - 2:47:15: Redo REFACTs new series in tmp var (lost when searching bug)
   - 2:47:50: FINISHED REFACT temp-vars, fast, readable & tested code.
   - 2:48:32: FINAL tmp-vars commit (same speed)
-- 2:49:32: **(11)** PUSH to pub repo (through an intermediate local)
+- 2:49:32: **(§11)** PUSH to pub repo (through an intermediate local)
   - 2:50:04: ...mean repo
   - 2:51:39: END
 
