@@ -28,6 +28,7 @@ tags: dev
   - assign to www-ssl,
   - disable `wfww` service
 - [HASS integration](https://www.home-assistant.io/integrations/mikrotik)
+[- DoH setup](https://www.shellhacks.com/mikrotik-dns-over-https-doh-server-cloudflare/)
 
 ## Tips
 
@@ -39,49 +40,51 @@ tags: dev
 ```txt
 /ip dhcp-server lease print brief
 Flags: X - disabled, R - radius, D - dynamic, B - blocked
- #   ADDRESS                  MAC-ADDRESS       HOST-NAME         SERVER         RATE-LIMIT         STATUS  LAST-SEEN
- 0   ;;; kudos eth
-     192.168.88.10            E8:6A:64:AF:FD:E2 kudos             default                           bound   1h58m13s
- 1   ;;; raspanki
-     192.168.88.8             B8:27:EB:2E:51:96 raspanki          default                           bound   2h48m14s
- 2   ;;; RackSwitch
-     192.168.88.129           E4:F0:04:98:FB:7C RackSwitch                                          waiting 5d21m31s
- 3   ;;; Samsung M2070 printer
-     192.168.88.13            00:15:99:EE:2E:C0 M2070                                               bound   1h17m27s
- 4   ;;; freedombox
-     192.168.88.4             02:D7:02:C1:D1:3F                                                     waiting never
- 5   ;;; A/C Inventor
-     192.168.88.18            AC:93:C4:AE:CC:DC                                                     bound   2h45m3s
- 6   ;;; Dehumidifier
-     192.168.88.19            84:7C:9B:67:FB:E0                                                     waiting never
- 7   ;;; V380 Cam eth
-     192.168.88.20            7C:E0:00:CC:CB:F3                                                     waiting never
- 8   ;;; Imou Cam Indoor eth
-     192.168.88.21            BC:32:5F:DB:76:73                                                     waiting never
- 9   ;;; kitapi-A-adm
-     192.168.88.165           AC:1F:6B:A9:6A:7F kitapi1                                             bound   4h44m24s
-10   ;;; kitapi-B-adm
-     192.168.88.166           AC:1F:6B:A9:6A:9B kitapi2                                             bound   4h43m52s
-11   ;;; kitapi-C-adm
-     192.168.88.167           AC:1F:6B:A9:6A:68                                                     waiting never
-12   ;;; kitapi-D-adm
-     192.168.88.168           AC:1F:6B:A9:6A:67                                                     waiting never
-13   ;;; V380-bulb-cam
-     192.168.88.22            C4:3C:B0:43:BF:AF                   default                           bound   2h44m21s
-14   192.168.88.25            A0:43:B0:BA:1C:04 BroadLink-Remo... default                           bound   33m35s
-15   ;;; kudos wlan
-     192.168.88.11            D4:3B:04:7C:25:E5 kudos             default                           bound   4h52m46s
-16 D 192.168.88.249           94:B8:6D:4C:14:C7 DESKTOP-GE1HJHD   default                           bound   6h12m3s
-17 D 192.168.88.251           4C:E0:DB:88:3F:C6 Redmi-Note-11S    default                           bound   3h10m47s
-18 D 192.168.88.247           9A:DA:C4:BB:BB:AC RE200             default                           bound   2d23h35m21s
-19 D 192.168.88.246           9E:3E:2B:E1:97:3E Redmi-Note-11S    default                           bound   5m28s
-20 D 192.168.88.245           48:87:59:2E:3F:98 Redmi-Note-11S    default                           bound   13h40m37s
-21   ;;; KitapiA main
-     192.168.88.133           AC:1F:6B:B0:DF:C2 kitapi1           default                           bound   5d43m29s
-22 D 192.168.88.126           9A:DA:C4:55:E1:85                   default                           bound   3d1h23m50s
-23   ;;; RE200 tp-link range extender (vodafone TV)
-     192.168.88.5             BA:BB:AC:BB:BB:AC RE200             default                           bound   6m47s
-24 D 192.168.88.102           54:60:09:D5:B1:64 Chromecast-Audio  default                           bound   2h48m2s
+ #   ADDRESS                    MAC-ADDRESS       HOST-NAME        SERVER
+  0   ;;; raspanki
+      192.168.88.8               B8:27:EB:2E:51:96 raspanki         default
+  1   ;;; RackSwitch
+      192.168.88.129             E4:F0:04:98:FB:7C RackSwitch       default
+  2   ;;; printerM2070
+      192.168.88.13              00:15:99:EE:2E:C0 M2070            default
+  3   ;;; freedombox
+      192.168.88.4               02:D7:02:C1:D1:3F                  default
+  4   ;;; climaAC
+      192.168.88.18              AC:93:C4:AE:CC:DC net_ac_CCDC      default
+  5   ;;; climaDehumid
+      192.168.88.19              84:7C:9B:67:FB:E0                  default
+  6   ;;; V380Cam
+      192.168.88.20              7C:E0:00:CC:CB:F3                  default
+  7   ;;; ImouCam
+      192.168.88.21              BC:32:5F:DB:76:73                  default
+  8   ;;; kitapiAadm
+      192.168.88.165             AC:1F:6B:A9:6A:7F kitapiAadm       default
+  9   ;;; kitapiBadm
+      192.168.88.166             AC:1F:6B:A9:6A:9B kitapiBadm       default
+ 10   ;;; kitapiCadm
+      192.168.88.167             AC:1F:6B:A9:6A:68                  default
+ 11   ;;; kitapiDadm
+      192.168.88.168             AC:1F:6B:A9:6A:67                  default
+ 12   ;;; V380bulb
+      192.168.88.22              C4:3C:B0:43:BF:AF                  default
+ 13   ;;; broadlinkIR
+      192.168.88.25              A0:43:B0:BA:1C:04 BroadLink-Rem... default
+ 14   ;;; kitapiA
+      192.168.88.133             AC:1F:6B:B0:DF:C2 kitapiA          default
+ 15   ;;; RE200
+      192.168.88.5               BA:BB:AC:BB:BB:AC RE200            default
+ 16   ;;; chromeAudio
+      192.168.88.14              54:60:09:D5:B1:64 Chromecast-Audio default
+ 17   ;;; kudosETH
+      192.168.88.10              E8:6A:64:AF:FD:E2 kudos            default
+ 18   ;;; KudosWIFI
+      192.168.88.11              D4:3B:04:7C:25:E5 kudos            default
+ 19   ;;; tonia11s
+      192.168.88.27              9E:3E:2B:E1:97:3E Redmi-Note-11S   default
+ 20   ;;; ank11s
+      192.168.88.28              48:87:59:2E:3F:98 Redmi-Note-11S   default
+ 21   ;;; toniaPC
+      192.168.88.29              94:B8:6D:4C:14:C7 DESKTOP-GE1HJHD  default
 ```
 
 ## BRIDGE ZTE
@@ -165,7 +168,7 @@ Flags: X - disabled, R - radius, D - dynamic, B - blocked
 #
 # Attention: The WAN IF name is also used as the WAN address-list name,
 # ie. this address-list must have been created!
-:log debug "UpdWAN: WAN IP($wanIfId) -> $newIp -> $host.$domain, $[/system script environment print as-value]"
+:log debug "UpdWAN: WAN IP($wanIfId) -> $newIp -> $host.$domain, $[:tostr [/system script environment print as-value]]"
 
 :local ifName [/interface get $wanIfId name]
 
@@ -207,7 +210,7 @@ Flags: X - disabled, R - radius, D - dynamic, B - blocked
     :error "UpdWAN: dynamic DNS FAILED $dnsIp -> $newIp, response: $response"
   }
 
-  :log info "UpdWAN: dynamic DNS: $dnsIp -> $newIp"
+  :log info "UpdWAN: dynamic DNS:($oldIp, $dnsIp) -> $newIp"
   :log debug "UpdWAN: dynamic DNS HTTP-response: $response"
 } else={
   :log info "UpdWAN: dynamic DNS already '$newIp', no action."
@@ -224,49 +227,56 @@ Flags: X - disabled, R - radius, D - dynamic, B - blocked
 ## [DNS batch-sync from DHCP](https://wiki.mikrotik.com/wiki/Setting_static_DNS_record_for_each_DHCP_lease)
 
 ```lua
-# DNS record for DHCP lease
+# DNS record for DHCP lease, `hostname`` derrived in this order (1st wins):
+# - lease-comment
+# - `MACtoNames` array indeced by lease-mac
+# - lease-host-name
 
 :local topdomain "ank.home";
 :local MACtoNames {
-  "E8:6A:64:AF:FD:E2"="kudos-eth"
-  "D4:3B:04:7C:25:E5"="kudos-wifi"
-  "AC:93:C4:AE:CC:DC"="ac"
-  "54:60:09:D5:B1:64"="chromeaudio"
-  "A0:43:B0:BA:1C:04"="broadlinkIR"
-  "94:B8:6D:4C:14:C7"="toniaPC"
-  "48:87:59:2E:3F:98"="ank11s"
-  "9E:3E:2B:E1:97:3E"="tonia11s"
+  "SO:ME:MA:CA:DD:RR"="hostname"
 }
 
 :local hostname;
-:local hostip;
+:local leaseIP;
 :local leaseMAC
 
 /ip dhcp-server lease;
 
 :foreach i in=[find] do={
   :set leaseMAC [get $i mac-address]
-  :set hostname ($MACtoNames->$leaseMAC);
-  :set hostip [get $i address];
+  :set leaseIP [get $i address];
+
+  :set hostname [get $i comment]
   :if ([:len $hostname] = 0) do={
-    :set hostname [get $i host-name];
+    :set hostname ($MACtoNames->$leaseMAC);
+    :if ([:len $hostname] = 0) do={
+      :set hostname [get $i host-name];
+    }
   }
 
   :if ([:len $hostname] = 0) do={
-    :log warning "SyncDNS: no hostname for ($leaseMAC, $[:tostr $hostip])!"
-  } else {
-    /ip dns static
-    :set hostname "$hostname.$topdomain";
+    :log warning "SyncDNS: no hostname for ($leaseMAC, $[:tostr $leaseIP])!"
+  } else={
+    :local fqdn "$hostname.$topdomain";
+    :local active [get $i active-address]
 
-    :do {
-      :log info "SyncDNS: $hostname --> $hostip";
-      :if [find name=$hostname] do={
-        set [find name=$hostname] address=$hostip comment="From SyncDns script"
-      } else={
-        add name=$hostname address=$hostip comment="From SyncDns script"
+    /ip dns static
+
+    :if $active do={
+      :do {
+        :log info "SyncDNS: $fqdn --> $leaseIP";
+        :if [find name=$fqdn] do={
+          set [find name=$fqdn] address=$leaseIP comment="SyncDns"
+        } else={
+          add name=$fqdn address=$leaseIP comment="SyncDns"
+        }
+      } on-error={
+        :log info "SyncDNS: FAIL adding: $fqdn --> ($leaseMAC, $leaseIP)";
       }
-    } on-error={
-      :log info "SyncDNS: FAIL adding: $hostname --> ($leaseMAC, $hostip)";
+    } else={
+        :log info "SyncDNS: DELETE $fqdn --> ($leaseMAC, $leaseIP)"
+        /ip dns static remove [find name=$fqdn]
     }
   }
 }
@@ -275,43 +285,53 @@ Flags: X - disabled, R - radius, D - dynamic, B - blocked
 ## DNS from DHCP callback
 
 ```lua
-# Called aftes a DHCP-lease changes status and it update host's DNS AAA record.
+# Called after a DHCP-lease changes status and it update host's DNS AAA record.
 # Variables that can be used in the script:
 # - leaseMAC      - DHCP mac address
 # - leaseIP       - DHCP IP address
-# - leaseHostname - (optional) DHCP hostname (if not in `MACtoNames` overrides)
+# - leaseHostname - (optional) DHCP detedted hostname
 # - topDomain     - Appended to hostname to derrive FQDN
 # - MACtoNames    - (array) overrides/defaults for the hostnames derrived from DHCP.
 {
   :log debug "UpdDhcpDns: leaseMAC: $leaseMAC, leaseIP: $leaseIP, leaseHostname: $leaseHostname, topDomain: $topDomain, MACtoNames: $[:tostr $MACtoNames]"
 
-  # Derive hostname from overrides, or DHCP, or fail.
-  :local hostname ($MACtoNames->$leaseMAC);
+  :local hostname
+
+  # Derive hostname from DHCP-comment, overrides, DHCP-hostname, or fail.
+  :set hostname [/ip dhcp-server lease get [find mac-address=$leaseMAC] comment]
   :if ([:len $hostname] = 0) do={
-    :set hostname $leaseHostname;
+    :set hostname ($MACtoNames->$leaseMAC);
+    :if ([:len $hostname] = 0) do={
+      :set hostname $leaseHostname;
+    }
   }
   :if ([:len $hostname] = 0) do={
-    :error "UpdDhcpDns: unknown hostname for ($leaseIP, $leaseMAC)"
+    :error "UpdDhcpDns: unknown hostname for ($leaseIP, $leaseMAC)";
   }
 
   /ip dns static
   :set hostname "$hostname.$topDomain"
 
   :local prevId [find name=$hostname];
-  :local prevIP [get $prevId address];
-  :if ($prevIP = $leaseIP) do={
-    :log info "UpdDhcpDns: no change: $hostname --> ($leaseIP, $leaseMAC)"
-  } else={
-    :do {
-      :log info "UpdDhcpDns: $hostname --> ($leaseIP, $leaseMAC) (was $prevIP)"
-      :if $prevId do={
-        set $prevId address=$leaseIP comment="From UpdDchpDns script"
-      } else={
-        add name=$hostname address=$leaseIP comment="From UpdDchpDns script"
-      }
-    } on-error={
-      :error "UpdDhcpDns: failed!\n $[:tostr [/system script environment print as-value]]"
+  :if ($prevId) do={
+    :local prevIP [get $prevId address];
+    :log debug "UpdDhcpDns: $hostname ($leaseIP, $leaseMAC) was $prevIP"
+
+    :if ($prevIP = $leaseIP) do={
+        :log info "UpdDhcpDns: no change: $hostname --> ($leaseIP, $leaseMAC)"
+        :return 0
     }
+  }
+
+  :do {
+    :log info "UpdDhcpDns: $hostname --> ($leaseIP, $leaseMAC) (was $prevIP)"
+    :if $prevId do={
+        set $prevId address=$leaseIP comment="UpdDchpDns"
+    } else={
+        add name=$hostname address=$leaseIP comment="UpdDchpDns"
+    }
+  } on-error={
+    :error "UpdDhcpDns: failed!\n $[:tostr [/system script environment print as-value]]"
   }
 }
 ```
@@ -328,17 +348,7 @@ Flags: X - disabled, R - radius, D - dynamic, B - blocked
 # - lease-options     - an array of received options
 {
   #:log debug ("Calling UpdDhcpDns(bound: $leaseBound, leaseMAC=$leaseActMAC leaseIP=$leaseActIP leaseHostname=" . $"lease-hostname" . "(")
-
-  :local MACtoNames {
-    "E8:6A:64:AF:FD:E2"="kudos-eth"
-    "D4:3B:04:7C:25:E5"="kudos-wifi"
-    "AC:93:C4:AE:CC:DC"="ac"
-    "54:60:09:D5:B1:64"="chromeaudio"
-    "A0:43:B0:BA:1C:04"="broadlinkIR"
-    "94:B8:6D:4C:14:C7"="toniaPC"
-    "48:87:59:2E:3F:3E"="ank11s"
-    "9E:3E:2B:E1:97:98"="tonia11s"
-  }
+  :local MACtoNames {"mac"="ip"}
 
   # Do nothing(!) if lease unbound.
   :if ($leaseBound=1) do={

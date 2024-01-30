@@ -15,7 +15,7 @@ tags: hass home my_IT
 
 ## TODO
 
-- [ ] Install Containered
+- [x] Install Containered: `apt install docker.io`
   - [ ] MQTT AddOn
   - [x] cron-job for letsencrypt
   - [ ] splitBrain DNS (AdGuard) to have a single hass-URL in browsers
@@ -27,6 +27,7 @@ tags: hass home my_IT
     - [x] nmap: DONE, but may DRAIN BATTERIES!
     - [x] bt
     - [ ] integrate [my router]()https://github.com/ericpignet/home-assistant-tplink_router (needs development)
+- [ ] `sensor/platform: systemmonitor` @ `configuration.yaml` to watch raspberry
 - [x] integrate Tonia
   - [x] account, 2FA
   - [x] hass-app
@@ -73,7 +74,7 @@ tags: hass home my_IT
   - [ ] AppDaemon
   - [ ] VSCode
   - [ ] Node-RED
-
+- [ ] [Central heating Heat meters googling](https://www.google.com/search?q=impeller+type+heat+meter+zigbee&oq=impeller+type+heat+meter+zigbee&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIGCAEQLhhA0gEIMzQ4NGowajSoAgCwAgA&sourceid=chrome&ie=UTF-8)
 ## CO2 sensors
 
 NDIR sensors only
@@ -97,3 +98,36 @@ NDIR sensors only
   - 6000mh/6h
   - 7.3inch display
 - [DIY Zigbee USB CO2 meter](https://diyruz.github.io/posts/airsense/)
+
+## Clima
+
+- [Q: Set timer duration with GUI](https://community.home-assistant.io/t/timer-duration-from-lovelace-ui/308469)
+  - [another Q](https://community.home-assistant.io/t/start-a-timer-with-a-given-number-of-minutes-dynamic-duration/300625)
+
+## HACS
+
+```bash
+raspanki: $ ls -1 /etc/srv/hass/{custom_components,www/community}/
+/etc/srv/hass/custom_components/:
+  hacs
+  ipmi
+  ll_notify
+  mass
+  midea_ac_lan
+  monitor_docker
+  proxmoxve
+  scheduler
+  webrtc
+  xiaomi_miot
+
+/etc/srv/hass/www/community/:
+  battery-state-card
+  home-assistant-jukebox
+  kiosk-mode
+  lovelace-card-templater
+  lovelace-layout-card
+  lovelace-mushroom
+  lovelace-plotly-graph-card
+  scheduler-card
+  timer-bar-card
+```

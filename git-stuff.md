@@ -44,3 +44,20 @@ Borrow images from [this SO](https://stackoverflow.com/a/49755270/548792).
   - **branch:** the remote branch that the current branch is tracking
   - see [this SO](https://stackoverflow.com/questions/2739376/definition-of-downstream-and-upstream/6244487#6244487)
 - **push target:** the remote branch that the current branch is pushing to
+
+## [Git Internals DAG](https://git-scm.com/book/en/v2/Git-Internals-Git-Objects)
+
+
+```txt
+refs   :  +--------+-------.
+                   |       |
+       :  note ----+-------+----------+---------.
+objects:           |       |          |         |
+       :           v       v          v         v
+       :          tag -> commit -+-> tree -+-> blob
+                           ^     |     ^   |
+                           |     |     |   |
+                           '-----'     '---'
+remarks:                  parent(s)    dirs    files
+                          (history)
+```
