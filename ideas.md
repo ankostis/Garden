@@ -8,8 +8,8 @@ tags: dev
 - fund historical tv knowledge contest
 - [[co2-dyi]], [[dyi-uv-c-air-purifier]]
 - Presentations:
-  - [ ] 1st steps in programming
-  - [ ] [[scientific-authoring]]
+  - [ ] [[1st-steps-in-programming-presentation]]
+  - [ ] [[scientific-authoring-presentation]]
 
 # Tools
 

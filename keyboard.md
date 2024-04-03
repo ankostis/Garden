@@ -12,7 +12,7 @@
 4. Moonlander
    - US, no concave
 5. Ultimate Hacking Keyboard v2
-   - Hungary, no ortholinear, no tenting, no concave, trackball vs thumb cluster @ the right
+   - Hungary, no ortholinear, no tenting, no concave, trackball vs thumb cluster @ the reference/kconfig.html#config
 
 ## Desired Features
 
@@ -31,6 +31,10 @@
 - [interesting top layout](https://www.keyboard-design.com/letterlayout.html?layout=hieaqmtsrn.en.ansi)
 - [Moonlander layouts tutorials](https://configure.zsa.io/moonlander/search?q=programming&page=1&anonymous=false&withTour=true)
 - [KeymapDB: an open-source db for ergonomic QMKs](https://keymapdb.com/)
+- [@casuanoob's mouse combos](https://discord.com/channels/681309835135811648/747850558630789210/1214753868882382929):
+  ![@casuanoob's mouse combos](casuanoob-mouse-combos.png)
+  and the [full keymap](https://keymapdb.com/keymaps/casuanoob/)
+
 
 ## Dactyl Manuform
 
