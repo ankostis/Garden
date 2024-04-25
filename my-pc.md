@@ -3,7 +3,11 @@ tags: dev
 ---
 # My PC
 
-- kudos
+- Lenovo T480
+- Machine-type: 20L5CT01WW
+- Serial: PF1LJ54N
+- MB-Serial: L1HF91Z009S
+- name: kudos
 - date: Mar 20219
 - Maintenance tasks for my PC: ~/README.md
 - [ ] move `~/README.md --> /etc/`, and link it from my home.
