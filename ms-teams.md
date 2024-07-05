@@ -1,5 +1,13 @@
 # MS-teams
 
+## Short-commings
+
+- Cannot save links (bookmarks)
+- Cannot open more app windows
+- Cannot hold 2 or more chats/channels viewable side by side
+- Cannot scroll to the last posts with a button from mobile
+  (hindering long posts, since clicking the link of past replies gets you at the top)
+
 ## Short-commings vs Slack, Zulip
 
 - Only the author can edit OP
