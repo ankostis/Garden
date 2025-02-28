@@ -1,0 +1,5 @@
+---
+type: daily-note
+---
+
+# $CURRENT_YEAR-$CURRENT_MONTH-$CURRENT_DATE $CURRENT_DAY_NAME_SHORT
