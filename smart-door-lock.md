@@ -1,0 +1,54 @@
+---
+tags: shopping
+---
+
+# Smart door lock
+
+- [reddit for smart-lock for HASS](https://www.reddit.com/r/smarthome/comments/12q43gt/look_for_a_smart_lock_that_can_fit_over_an/)
+- [kwikset 910 SmartCode](https://www.kwikset.com/products/detail/910-smartcode-traditional-electronic-deadbolt-with-zigbee-technology?variant=910-trl-zb-15):
+   - NO SELLER!!
+- [Danalock](https://danalock.com/products/danalock-v3-smart-lock)
+  - ✅ Danish elegant design
+  - ✅ BLE, Z-Wave, Zigbee
+  - ✅ skroutz, καυκας, μεϊδανης, e-kleidaras
+  - HASS compatibylity:
+    - BLE
+    - zigbee?
+- [Nuki Smart Ultra](https://nuki.io/en-gr/products/smart-lock-ultra?chooser=true&sku=221145)
+  - ✅ elegant
+  - matter
+  - ✅ Plaisio!!
+- Aqara U200
+    - Matter/thread
+    - ✅ rechargable
+  - [HASS!!](https://www.home-assistant.io/integrations/nuki/)
+- [Switchbot Lock Pro (bluetooth)](https://eu.switch-bot.com/collections/smart-locks)
+  - ✅ 105€
+  - ✅ [HAS)
+  - ✅ [skroutz](https://www.skroutz.gr/s/54776364/Switchbot-Ilektroniki-Kleidaria-me-Syndesi-Bluetooth-kai-Wi-Fi-064982.html?product_id=243313161&sponsored=fbt)
+  - ❌ big
+- [Tedee](https://www.skroutz.gr/s/49210446/Tedee-Ilektroniki-Kleidaria-Smart-Lock-Pro-se-chroma-Mayro-TLV1-OB-HK.html)
+  - ❌ 419€
+  - ❌ Needs Bluetooth-->WiFi bridge
+  - ✅ elegant
+  - ✅ skroutz
+  - ✅ [HASS](https://www.home-assistant.io/integrations/tedee/)
+- [August Wi-Fi Smart Lock](https://august.com/products/august-wifi-smart-lock)
+  - US
+  - WiFi only
+  - replaces deadbolt
+  - not eu-locks (it's circular)
+- [Wyze lock (not for keys :-()](https://www.wyze.com/products/wyze-lock)
+- [Kwikset 914](https://www.kwikset.com/products/detail/914-smartcode-contemporary-electronic-deadbolt-with-zigbee-technology?variant=914cnt-zb-15)
+- [Ultraloq](https://u-tec.com/pages/ultraloq)
+  - US
+  - HASS: Z-Wave
+- [Yale Linus L2 Smart Lock](https://www.yalehome.com/it/en/products/smart-security-ecosystem/smart-locks/linus-smart-lock-l2)
+  - ✅ Bluetooth 5.3
+  - ❌ matter: not mentioned in support material
+  - ✅ [Plaisio](https://www.plaisio.gr/anavathmisi-diktia/diktiaka/smarthome/yale-linus-l2-smart-lock-silver_4502248?gad_campaignid=22168404479)
+  - ✅ [HASS](https://www.home-assistant.io/integrations/yale/)
+  - ❌ big
+  - ❌ WiFi: required!!
+  - ❌ 6m battery duration
+  - ✅ battery rechargable

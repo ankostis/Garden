@@ -365,6 +365,18 @@ Kalamata
 
 ######
 
+TODO
+====
+
+CORS lock-in
+------------
+
+- Sample app: cannot share gmails to custom local-first social apps,
+  unless Google knows about my social-app.
+
+
+######
+
 :data-x: 2800
 :data-y: -200
 :data-z: 1200

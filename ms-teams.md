@@ -2,11 +2,16 @@
 
 ## Short-commings
 
-- Cannot save links (bookmarks)
-- Cannot open more app windows
+- No URL change when navigating in chats/channel posts.
+- No breadcrumb on each chat/channel
+  - Cannot view which is the Channel on telcos/presentations!!
+- Left sidebar is unstable (tree changes when in telco, even in new merged-UX)
+- Cannot save/retrieve bookmarks.
+- Cannot open more app windows.
 - Cannot hold 2 or more chats/channels viewable side by side
-- Cannot scroll to the last posts with a button from mobile
+- mobile app: cannot scroll to the last posts with a button from mobile
   (hindering long posts, since clicking the link of past replies gets you at the top)
+- Cannot search all past chats/channels en mass
 
 ## Short-commings vs Slack, Zulip
 
