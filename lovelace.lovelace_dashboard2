@@ -1,0 +1,901 @@
+{
+    "version": 1,
+    "key": "lovelace.lovelace_dashboard2",
+    "data": {
+        "config": {
+            "views": [
+                {
+                    "path": "default_view",
+                    "title": "Alarm",
+                    "cards": [
+                        {
+                            "type": "vertical-stack",
+                            "cards": [
+                                {
+                                    "type": "alarm-panel",
+                                    "states": [
+                                        "arm_away"
+                                    ],
+                                    "entity": "alarm_control_panel.alarm"
+                                },
+                                {
+                                    "type": "entity-filter",
+                                    "entities": [
+                                        {
+                                            "entity": "binary_sensor.lumi_lumi_sensor_magnet_87186204_on_off",
+                                            "name": "bathroom"
+                                        },
+                                        {
+                                            "entity": "binary_sensor.lumi_lumi_sensor_magnet_d6faaa04_on_off",
+                                            "name": "kid"
+                                        },
+                                        {
+                                            "entity": "binary_sensor.lumi_lumi_sensor_magnet_181e0e04_on_off",
+                                            "name": "bed-east"
+                                        },
+                                        {
+                                            "entity": "binary_sensor.lumi_lumi_sensor_magnet_48e6c703_on_off",
+                                            "name": "bed-south"
+                                        },
+                                        {
+                                            "entity": "binary_sensor.lumi_lumi_sensor_magnet_12066204_on_off",
+                                            "name": "lroom-south"
+                                        },
+                                        {
+                                            "entity": "binary_sensor.motion_01_ias_zone",
+                                            "name": "lroom-motion",
+                                            "icon": "hass:motion"
+                                        },
+                                        {
+                                            "entity": "binary_sensor.motion_01_occupancy",
+                                            "name": "lroom-occupy",
+                                            "icon": "hass:motion-outline"
+                                        },
+                                        {
+                                            "entity": "binary_sensor.lumi_lumi_sensor_magnet_30f9aa04_on_off",
+                                            "name": "frontdoor"
+                                        },
+                                        {
+                                            "entity": "binary_sensor.motion_02_ias_zone",
+                                            "name": "front-motion",
+                                            "icon": "hass:motion"
+                                        },
+                                        {
+                                            "entity": "binary_sensor.motion_02_occupancy",
+                                            "name": "front-occupy",
+                                            "icon": "hass:motion-outline"
+                                        },
+                                        {
+                                            "entity": "binary_sensor.lumi_lumi_sensor_magnet_f3046204_on_off",
+                                            "name": "backdoor"
+                                        },
+                                        {
+                                            "entity": "binary_sensor.motion_03_ias_zone",
+                                            "name": "back-motion",
+                                            "icon": "hass:motion"
+                                        },
+                                        {
+                                            "entity": "binary_sensor.motion_03_occupancy",
+                                            "name": "back-occupy",
+                                            "icon": "hass:motion-outline"
+                                        },
+                                        {
+                                            "entity": "binary_sensor.magnet_08",
+                                            "name": "gate"
+                                        },
+                                        {
+                                            "entity": "sensor.xiaomi_lumi_sen_ill_mgl01_95280a00_illuminance",
+                                            "name": "lum-lroom",
+                                            "state_filter": [
+                                                {
+                                                    "operator": ">",
+                                                    "value": 20
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "entity": "sensor.xiaomi_lumi_sen_ill_mgl01_illuminance",
+                                            "name": "lum-bed",
+                                            "state_filter": [
+                                                {
+                                                    "operator": ">",
+                                                    "value": 20
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "entity": "sensor.xiaomi_lumi_sen_ill_mgl01_1e2e0a00_illuminance",
+                                            "name": "lum-kid",
+                                            "state_filter": [
+                                                {
+                                                    "operator": ">",
+                                                    "value": 20
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "entity": "switch.plug_01",
+                                            "name": "camera",
+                                            "icon": "hass:cctv"
+                                        },
+                                        {
+                                            "entity": "binary_sensor.ups_online_status",
+                                            "state_filter": [
+                                                "off"
+                                            ]
+                                        },
+                                        {
+                                            "entity": "person.kostis_anagnostopoulos",
+                                            "name": "ankostis",
+                                            "state_filter": [
+                                                "home"
+                                            ]
+                                        },
+                                        {
+                                            "entity": "person.tonia_pitsili",
+                                            "name": "Tonia",
+                                            "state_filter": [
+                                                "home"
+                                            ]
+                                        }
+                                    ],
+                                    "state_filter": [
+                                        "on"
+                                    ],
+                                    "card": {
+                                        "type": "glance"
+                                    }
+                                },
+                                {
+                                    "type": "logbook",
+                                    "entities": [
+                                        "alarm_control_panel.alarm",
+                                        "binary_sensor.lumi_lumi_sensor_magnet_87186204_on_off",
+                                        "binary_sensor.lumi_lumi_sensor_magnet_d6faaa04_on_off",
+                                        "binary_sensor.lumi_lumi_sensor_magnet_181e0e04_on_off",
+                                        "binary_sensor.lumi_lumi_sensor_magnet_48e6c703_on_off",
+                                        "binary_sensor.lumi_lumi_sensor_magnet_12066204_on_off",
+                                        "binary_sensor.motion_01_ias_zone",
+                                        "binary_sensor.motion_01_occupancy",
+                                        "binary_sensor.lumi_lumi_sensor_magnet_30f9aa04_on_off",
+                                        "binary_sensor.motion_02_ias_zone",
+                                        "binary_sensor.motion_02_occupancy",
+                                        "binary_sensor.lumi_lumi_sensor_magnet_f3046204_on_off",
+                                        "binary_sensor.motion_03_ias_zone",
+                                        "binary_sensor.motion_03_occupancy",
+                                        "sensor.xiaomi_lumi_sen_ill_mgl01_95280a00_illuminance",
+                                        "sensor.xiaomi_lumi_sen_ill_mgl01_illuminance",
+                                        "sensor.xiaomi_lumi_sen_ill_mgl01_1e2e0a00_illuminance",
+                                        "switch.plug_01",
+                                        "switch.plug_02",
+                                        "switch.plug_03",
+                                        "switch.plug_04",
+                                        "sun.sun",
+                                        "person.kostis_anagnostopoulos",
+                                        "person.tonia_pitsili",
+                                        "binary_sensor.magnet_08"
+                                    ],
+                                    "hours_to_show": 24
+                                },
+                                {
+                                    "type": "history-graph",
+                                    "entities": [
+                                        {
+                                            "entity": "alarm_control_panel.alarm"
+                                        },
+                                        {
+                                            "entity": "binary_sensor.motion_01_occupancy",
+                                            "name": "Indoor motion"
+                                        },
+                                        {
+                                            "entity": "binary_sensor.motion_02_occupancy",
+                                            "name": "Frontyard motion"
+                                        },
+                                        {
+                                            "entity": "binary_sensor.motion_03_occupancy",
+                                            "name": "Backyard motion"
+                                        },
+                                        {
+                                            "entity": "binary_sensor.lumi_lumi_sensor_magnet_d6faaa04_on_off",
+                                            "name": "Kids window"
+                                        },
+                                        {
+                                            "entity": "binary_sensor.lumi_lumi_sensor_magnet_181e0e04_on_off",
+                                            "name": "Bed E_Window"
+                                        },
+                                        {
+                                            "entity": "binary_sensor.lumi_lumi_sensor_magnet_48e6c703_on_off",
+                                            "name": "Bed S_Window"
+                                        },
+                                        {
+                                            "entity": "binary_sensor.lumi_lumi_sensor_magnet_12066204_on_off",
+                                            "name": "LRoom window"
+                                        },
+                                        {
+                                            "entity": "binary_sensor.lumi_lumi_sensor_magnet_87186204_on_off",
+                                            "name": "Bath window"
+                                        },
+                                        {
+                                            "entity": "binary_sensor.lumi_lumi_sensor_magnet_30f9aa04_on_off",
+                                            "name": "Frontdoor"
+                                        },
+                                        {
+                                            "entity": "binary_sensor.lumi_lumi_sensor_magnet_f3046204_on_off",
+                                            "name": "Backdoor"
+                                        },
+                                        {
+                                            "entity": "binary_sensor.magnet_08"
+                                        },
+                                        {
+                                            "entity": "sensor.xiaomi_lumi_sen_ill_mgl01_95280a00_illuminance",
+                                            "name": "lum_lroom"
+                                        },
+                                        {
+                                            "entity": "sensor.xiaomi_lumi_sen_ill_mgl01_illuminance",
+                                            "name": "lum_bed"
+                                        },
+                                        {
+                                            "entity": "sensor.xiaomi_lumi_sen_ill_mgl01_1e2e0a00_illuminance",
+                                            "name": "lum_kid"
+                                        }
+                                    ],
+                                    "refresh_interval": 0,
+                                    "title": "Perimeter Sensors",
+                                    "hours_to_show": 24
+                                }
+                            ]
+                        },
+                        {
+                            "type": "grid",
+                            "cards": [
+                                {
+                                    "type": "button",
+                                    "tap_action": {
+                                        "action": "toggle"
+                                    },
+                                    "entity": "switch.plug_01",
+                                    "name": "Indoor-camera",
+                                    "icon": "hass:cctv",
+                                    "icon_height": "64px"
+                                },
+                                {
+                                    "type": "button",
+                                    "tap_action": {
+                                        "action": "toggle"
+                                    },
+                                    "entity": "switch.plug_02",
+                                    "name": "Garden-lights",
+                                    "icon": "mdi:moon-waning-crescent",
+                                    "icon_height": "64px"
+                                },
+                                {
+                                    "type": "button",
+                                    "tap_action": {
+                                        "action": "toggle"
+                                    },
+                                    "entity": "switch.plug_03",
+                                    "name": "Bed-light",
+                                    "icon": "hass:bed",
+                                    "icon_height": "64px"
+                                },
+                                {
+                                    "type": "button",
+                                    "tap_action": {
+                                        "action": "toggle"
+                                    },
+                                    "entity": "humidifier.midea_dehumidifier_23089744184640",
+                                    "name": "Humidifier",
+                                    "icon_height": "64px"
+                                },
+                                {
+                                    "type": "button",
+                                    "tap_action": {
+                                        "action": "call-service",
+                                        "service": "homeassistant.restart",
+                                        "service_data": {},
+                                        "target": {}
+                                    },
+                                    "name": "Restart HASS",
+                                    "icon": "hass:restart",
+                                    "icon_height": "64px"
+                                },
+                                {
+                                    "type": "light",
+                                    "entity": "light.colored_01_level_light_color_on_off",
+                                    "name": "WooxBulb"
+                                }
+                            ],
+                            "square": false
+                        },
+                        {
+                            "type": "horizontal-stack",
+                            "cards": [
+                                {
+                                    "type": "weather-forecast",
+                                    "entity": "weather.home",
+                                    "show_forecast": true
+                                },
+                                {
+                                    "type": "history-graph",
+                                    "entities": [
+                                        {
+                                            "entity": "sensor.midea_dehumidifier_23089744184640_humidity",
+                                            "name": "humidity"
+                                        }
+                                    ],
+                                    "hours_to_show": 96,
+                                    "refresh_interval": 0
+                                }
+                            ]
+                        },
+                        {
+                            "type": "vertical-stack",
+                            "title": "Internet",
+                            "cards": [
+                                {
+                                    "type": "glance",
+                                    "entities": [
+                                        {
+                                            "entity": "sensor.speedtest_download"
+                                        },
+                                        {
+                                            "entity": "sensor.speedtest_upload"
+                                        },
+                                        {
+                                            "entity": "sensor.speedtest_ping"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "history-graph",
+                                    "entities": [
+                                        {
+                                            "entity": "sensor.speedtest_download"
+                                        },
+                                        {
+                                            "entity": "sensor.speedtest_upload"
+                                        },
+                                        {
+                                            "entity": "sensor.speedtest_ping"
+                                        },
+                                        {
+                                            "entity": "sensor.tp_link_100v_kib_s_received"
+                                        },
+                                        {
+                                            "entity": "sensor.tp_link_100v_kib_s_sent"
+                                        }
+                                    ],
+                                    "hours_to_show": 72,
+                                    "refresh_interval": 0
+                                }
+                            ]
+                        },
+                        {
+                            "type": "glance",
+                            "title": "Samsung",
+                            "entities": [
+                                {
+                                    "entity": "sensor.samsung_m2070_series_toner_black"
+                                },
+                                {
+                                    "entity": "sensor.samsung_m2070_series_tray_1"
+                                },
+                                {
+                                    "entity": "sensor.samsung_m2070_series_output_tray_0"
+                                },
+                                {
+                                    "entity": "sensor.samsung_m2070_series"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "title": "Music",
+                    "path": "music",
+                    "cards": [
+                        {
+                            "type": "vertical-stack",
+                            "cards": [
+                                {
+                                    "type": "horizontal-stack",
+                                    "cards": [
+                                        {
+                                            "type": "media-control",
+                                            "entity": "media_player.living_room_audio"
+                                        },
+                                        {
+                                            "type": "media-control",
+                                            "entity": "media_player.chromecanakast"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "custom:jukebox-card",
+                                    "links": [
+                                        {
+                                            "url": "http://n10.radiojar.com/kokkino-ath.mp3?rj-ttl=5&rj-tok=AAABeepU_B8A3-ce3HIy_DVFBQ",
+                                            "name": "stokokkino"
+                                        },
+                                        {
+                                            "url": "http://radiostreaming.ert.gr/ert-proto",
+                                            "name": "ERA Proto Programma"
+                                        },
+                                        {
+                                            "url": "http://radiostreaming.ert.gr/ert-deftero",
+                                            "name": "ERA Deftero Programma"
+                                        },
+                                        {
+                                            "url": "http://radiostreaming.ert.gr/ert-trito",
+                                            "name": "ERA Trito Programma"
+                                        },
+                                        {
+                                            "url": "https://stream7.xdevel.com/audio0s975809-426/stream/icecast.audio",
+                                            "name": "LifeGate"
+                                        },
+                                        {
+                                            "url": "https://stream7.xdevel.com/audio2s975809-436/stream/icecast.audio",
+                                            "name": "LifeGate International"
+                                        },
+                                        {
+                                            "url": "http://n0c.radiojar.com/enlefko877?rj-ttl=5&rj-tok=AAABeea7mhkAt1yKx02qJK3b9w EnLeuko",
+                                            "name": "EnLefko"
+                                        },
+                                        {
+                                            "url": "http://best.live24.gr/best1222",
+                                            "name": "Best"
+                                        },
+                                        {
+                                            "url": "http://netradio.live24.gr/pepperorigin",
+                                            "name": "Pepper"
+                                        },
+                                        {
+                                            "url": "http://cast3.radiohost.ovh:8352/",
+                                            "name": "Blues radio"
+                                        }
+                                    ],
+                                    "entities": [
+                                        "media_player.living_room_audio",
+                                        "media_player.chromecanakast"
+                                    ]
+                                },
+                                {
+                                    "type": "history-graph",
+                                    "entities": [
+                                        {
+                                            "entity": "media_player.living_room_audio",
+                                            "name": "Audio"
+                                        },
+                                        {
+                                            "entity": "media_player.chromecanakast",
+                                            "name": "Chromecast"
+                                        }
+                                    ],
+                                    "hours_to_show": 72,
+                                    "refresh_interval": 0
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "title": "Phones",
+                    "path": "phones",
+                    "panel": true,
+                    "badges": [],
+                    "cards": [
+                        {
+                            "type": "horizontal-stack",
+                            "cards": [
+                                {
+                                    "type": "vertical-stack",
+                                    "cards": [
+                                        {
+                                            "type": "gauge",
+                                            "min": 0,
+                                            "max": 100,
+                                            "severity": {
+                                                "green": 72,
+                                                "yellow": 38,
+                                                "red": 17
+                                            },
+                                            "entity": "sensor.oneplus_a3010_battery_level"
+                                        },
+                                        {
+                                            "type": "glance",
+                                            "entities": [
+                                                {
+                                                    "entity": "sensor.oneplus_a3010_charger_type",
+                                                    "name": "charger"
+                                                },
+                                                {
+                                                    "entity": "sensor.oneplus_a3010_wifi_connection",
+                                                    "name": "wifi"
+                                                },
+                                                {
+                                                    "entity": "sensor.oneplus_a3010_public_ip_address",
+                                                    "name": "IP"
+                                                },
+                                                {
+                                                    "entity": "binary_sensor.oneplus_a3010_device_locked",
+                                                    "name": "screen"
+                                                },
+                                                {
+                                                    "entity": "binary_sensor.oneplus_a3010_keyguard_locked",
+                                                    "name": "locked"
+                                                },
+                                                {
+                                                    "entity": "sensor.oneplus_a3010_detected_activity",
+                                                    "name": "activity"
+                                                },
+                                                {
+                                                    "entity": "sensor.oneplus_a3010_last_reboot",
+                                                    "name": "reboot"
+                                                },
+                                                {
+                                                    "entity": "sensor.oneplus_a3010_last_update_trigger",
+                                                    "name": "updated"
+                                                },
+                                                {
+                                                    "entity": "sensor.oneplus_a3010_app_importance",
+                                                    "name": "app"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "history-graph",
+                                            "hours_to_show": 72,
+                                            "refresh_interval": 0,
+                                            "entities": [
+                                                {
+                                                    "entity": "device_tracker.oneplus_a3010",
+                                                    "name": "tracker"
+                                                },
+                                                {
+                                                    "entity": "sensor.oneplus_a3010_battery_level",
+                                                    "name": "batt_level"
+                                                },
+                                                {
+                                                    "entity": "sensor.oneplus_a3010_charger_type",
+                                                    "name": "charger"
+                                                },
+                                                {
+                                                    "entity": "sensor.oneplus_a3010_battery_temperature",
+                                                    "name": "batt_temperature"
+                                                },
+                                                {
+                                                    "entity": "sensor.oneplus_a3010_detected_activity",
+                                                    "name": "activity"
+                                                },
+                                                {
+                                                    "entity": "binary_sensor.oneplus_a3010_wifi_state",
+                                                    "name": "wifi"
+                                                },
+                                                {
+                                                    "entity": "sensor.oneplus_a3010_wifi_connection",
+                                                    "name": "SSID"
+                                                },
+                                                {
+                                                    "entity": "binary_sensor.oneplus_a3010_bluetooth_state",
+                                                    "name": "bluetooth"
+                                                },
+                                                {
+                                                    "entity": "sensor.oneplus_a3010_public_ip_address",
+                                                    "name": "IP"
+                                                },
+                                                {
+                                                    "entity": "sensor.oneplus_a3010_light_sensor",
+                                                    "name": "lumen"
+                                                },
+                                                {
+                                                    "entity": "binary_sensor.oneplus_a3010_device_locked",
+                                                    "name": "screen"
+                                                },
+                                                {
+                                                    "entity": "binary_sensor.oneplus_a3010_keyguard_locked",
+                                                    "name": "locked"
+                                                },
+                                                {
+                                                    "entity": "sensor.oneplus_a3010_phone_state",
+                                                    "name": "phone"
+                                                },
+                                                {
+                                                    "entity": "binary_sensor.oneplus_a3010_music_active",
+                                                    "name": "music"
+                                                },
+                                                {
+                                                    "entity": "sensor.oneplus_a3010_app_importance",
+                                                    "name": "app"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "map",
+                                            "entities": [
+                                                {
+                                                    "entity": "device_tracker.oneplus_a3010"
+                                                }
+                                            ],
+                                            "dark_mode": false,
+                                            "hours_to_show": 48,
+                                            "default_zoom": 14,
+                                            "aspect_ratio": "1.61"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "vertical-stack",
+                                    "cards": [
+                                        {
+                                            "type": "gauge",
+                                            "min": 0,
+                                            "max": 100,
+                                            "severity": {
+                                                "green": 72,
+                                                "yellow": 38,
+                                                "red": 17
+                                            },
+                                            "entity": "sensor.huawei_battery_level"
+                                        },
+                                        {
+                                            "type": "glance",
+                                            "entities": [
+                                                {
+                                                    "entity": "sensor.huawei_charger_type",
+                                                    "name": "charger"
+                                                },
+                                                {
+                                                    "entity": "sensor.huawei_wifi_connection",
+                                                    "name": "wifi"
+                                                },
+                                                {
+                                                    "entity": "sensor.huawei_public_ip_address",
+                                                    "name": "IP"
+                                                },
+                                                {
+                                                    "entity": "binary_sensor.huawei_device_locked",
+                                                    "name": "screen"
+                                                },
+                                                {
+                                                    "entity": "binary_sensor.huawei_keyguard_locked",
+                                                    "name": "locked"
+                                                },
+                                                {
+                                                    "entity": "sensor.huawei_detected_activity",
+                                                    "name": "activity"
+                                                },
+                                                {
+                                                    "entity": "sensor.huawei_last_reboot",
+                                                    "name": "reboot"
+                                                },
+                                                {
+                                                    "entity": "sensor.huawei_app_importance",
+                                                    "name": "app"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "history-graph",
+                                            "hours_to_show": 72,
+                                            "refresh_interval": 0,
+                                            "entities": [
+                                                {
+                                                    "entity": "device_tracker.huawei",
+                                                    "name": "tracker"
+                                                },
+                                                {
+                                                    "entity": "sensor.huawei_battery_level",
+                                                    "name": "batt_level"
+                                                },
+                                                {
+                                                    "entity": "sensor.huawei_charger_type",
+                                                    "name": "charger"
+                                                },
+                                                {
+                                                    "entity": "sensor.huawei_battery_temperature",
+                                                    "name": "batt_temperature"
+                                                },
+                                                {
+                                                    "entity": "sensor.huawei_detected_activity",
+                                                    "name": "activity"
+                                                },
+                                                {
+                                                    "entity": "binary_sensor.huawei_wifi_state",
+                                                    "name": "wifi"
+                                                },
+                                                {
+                                                    "entity": "sensor.huawei_wifi_connection",
+                                                    "name": "SSID"
+                                                },
+                                                {
+                                                    "entity": "binary_sensor.huawei_bluetooth_state",
+                                                    "name": "bluetooth"
+                                                },
+                                                {
+                                                    "entity": "sensor.huawei_public_ip_address",
+                                                    "name": "IP"
+                                                },
+                                                {
+                                                    "entity": "sensor.huawei_light_sensor",
+                                                    "name": "lumen"
+                                                },
+                                                {
+                                                    "entity": "binary_sensor.huawei_device_locked",
+                                                    "name": "screen"
+                                                },
+                                                {
+                                                    "entity": "binary_sensor.huawei_keyguard_locked",
+                                                    "name": "locked"
+                                                },
+                                                {
+                                                    "entity": "sensor.huawei_phone_state",
+                                                    "name": "phone"
+                                                },
+                                                {
+                                                    "entity": "binary_sensor.huawei_music_active",
+                                                    "name": "music"
+                                                },
+                                                {
+                                                    "entity": "sensor.huawei_app_importance",
+                                                    "name": "app"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "map",
+                                            "entities": [
+                                                {
+                                                    "entity": "device_tracker.huawei"
+                                                }
+                                            ],
+                                            "dark_mode": false,
+                                            "hours_to_show": 48,
+                                            "default_zoom": 14,
+                                            "aspect_ratio": "1.61"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "vertical-stack",
+                                    "cards": [
+                                        {
+                                            "type": "gauge",
+                                            "min": 0,
+                                            "max": 100,
+                                            "severity": {
+                                                "green": 72,
+                                                "yellow": 38,
+                                                "red": 17
+                                            },
+                                            "entity": "sensor.pixel_4a_5g_battery_level"
+                                        },
+                                        {
+                                            "type": "glance",
+                                            "entities": [
+                                                {
+                                                    "entity": "sensor.pixel_4a_5g_charger_type",
+                                                    "name": "charger"
+                                                },
+                                                {
+                                                    "entity": "sensor.pixel_4a_5g_wifi_connection",
+                                                    "name": "wifi"
+                                                },
+                                                {
+                                                    "entity": "sensor.pixel_4a_5g_public_ip_address",
+                                                    "name": "IP"
+                                                },
+                                                {
+                                                    "entity": "binary_sensor.pixel_4a_5g_device_locked",
+                                                    "name": "screen"
+                                                },
+                                                {
+                                                    "entity": "binary_sensor.pixel_4a_5g_keyguard_locked",
+                                                    "name": "locked"
+                                                },
+                                                {
+                                                    "entity": "sensor.pixel_4a_5g_detected_activity",
+                                                    "name": "activity"
+                                                },
+                                                {
+                                                    "entity": "sensor.pixel_4a_5g_last_reboot",
+                                                    "name": "reboot"
+                                                },
+                                                {
+                                                    "entity": "sensor.pixel_4a_5g_last_update_trigger",
+                                                    "name": "updated"
+                                                },
+                                                {
+                                                    "entity": "sensor.pixel_4a_5g_app_importance",
+                                                    "name": "app"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "history-graph",
+                                            "hours_to_show": 72,
+                                            "refresh_interval": 0,
+                                            "entities": [
+                                                {
+                                                    "entity": "device_tracker.pixel_4a_5g",
+                                                    "name": "tracker"
+                                                },
+                                                {
+                                                    "entity": "sensor.pixel_4a_5g_battery_level",
+                                                    "name": "batt_level"
+                                                },
+                                                {
+                                                    "entity": "sensor.pixel_4a_5g_charger_type",
+                                                    "name": "charger"
+                                                },
+                                                {
+                                                    "entity": "sensor.pixel_4a_5g_battery_temperature",
+                                                    "name": "batt_temperature"
+                                                },
+                                                {
+                                                    "entity": "sensor.pixel_4a_5g_detected_activity",
+                                                    "name": "activity"
+                                                },
+                                                {
+                                                    "entity": "binary_sensor.pixel_4a_5g_wifi_state",
+                                                    "name": "wifi"
+                                                },
+                                                {
+                                                    "entity": "sensor.pixel_4a_5g_wifi_connection",
+                                                    "name": "SSID"
+                                                },
+                                                {
+                                                    "entity": "binary_sensor.pixel_4a_5g_bluetooth_state",
+                                                    "name": "bluetooth"
+                                                },
+                                                {
+                                                    "entity": "sensor.pixel_4a_5g_public_ip_address",
+                                                    "name": "IP"
+                                                },
+                                                {
+                                                    "entity": "sensor.pixel_4a_5g_light_sensor",
+                                                    "name": "lumen"
+                                                },
+                                                {
+                                                    "entity": "binary_sensor.pixel_4a_5g_device_locked",
+                                                    "name": "screen"
+                                                },
+                                                {
+                                                    "entity": "binary_sensor.pixel_4a_5g_keyguard_locked",
+                                                    "name": "locked"
+                                                },
+                                                {
+                                                    "entity": "sensor.pixel_4a_5g_phone_state",
+                                                    "name": "phone"
+                                                },
+                                                {
+                                                    "entity": "binary_sensor.pixel_4a_5g_music_active",
+                                                    "name": "music"
+                                                },
+                                                {
+                                                    "entity": "sensor.pixel_4a_5g_app_importance",
+                                                    "name": "app"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "map",
+                                            "entities": [
+                                                {
+                                                    "entity": "device_tracker.pixel_4a_5g"
+                                                }
+                                            ],
+                                            "dark_mode": false,
+                                            "hours_to_show": 48,
+                                            "default_zoom": 14,
+                                            "aspect_ratio": "1.61"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}

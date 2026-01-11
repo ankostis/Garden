@@ -1,0 +1,25 @@
+# Tapo-C310 camera
+
+- Revive Tapo C310 Camera with cut cables:
+  - date: 2025-09-27
+  - [POE pinouts](https://www.utepo.net/article/detail/Which_Wires_of_100Mbps_and_1000Mbps_Network_Cables_are_Used_to_Power_in_the_POE_System.html)
+  - GeminiAI: T568B standard (but camera's wire colors are non compliant)
+  - [Damaged cable thread](https://community.tp-link.com/en/home/forum/topic/666456)
+    - light-orange: 1
+    - orange: 2
+    - light-green: 3
+    - green: 6
+- My white passive POE splitter colors:
+  - red: 1
+  - white: 2
+  - grey: 3
+  - green: 6
+- Camera data wires <-> pin, splitter:
+  - red: +9.0V
+  - black: 0V
+  - yellow: 1, red
+  - orange: 2, white
+  - green: 3, grey
+  - blue: 6, green
+- BUT...forgot to screw the base!!! (have to cut it again).
+- Besides, Hailo-8 does not run within HassIO!!!

@@ -11,7 +11,7 @@
 - Cannot hold 2 or more chats/channels viewable side by side
 - mobile app: cannot scroll to the last posts with a button from mobile
   (hindering long posts, since clicking the link of past replies gets you at the top)
-- Cannot search all past chats/channels en mass
+- Cannot search all past chats/channels en mass.
 
 ## Short-commings vs Slack, Zulip
 

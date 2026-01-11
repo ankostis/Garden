@@ -1,0 +1,63 @@
+# Update Dynamic-DNS  with the current WAN IP from the address-list.
+# A NameCheap dynamic-DNS client in MikroTik syntax
+# - based on https://wiki.mikrotik.com/wiki/Dynamic_DNS_Update_Script_for_EveryDNS
+# - and adapted by https://pastebin.com/qkaPy86x
+# - according to https://www.namecheap.com/support/knowledgebase/article.aspx/29/11/how-do-i-use-a-browser-to-dynamically-update-the-hosts-ip
+#
+# Args from `/ppp profile on-up` property
+# (see https://help.mikrotik.com/docs/display/ROS/PPP+AAA#PPPAAA-UserProfiles):
+#
+#  - $wanIfId: the id of the WAN IF
+#  - $newIp: the remote IP assigned to the WAN IF
+#  - $host: dynamic DNS host name (alone)
+#  - $domain: dynamic DNS domain
+#
+# Attention: The WAN IF name is also used as the WAN address-list name,
+# ie. this address-list must have been created!
+:log debug "UpdWAN: $[/system script environmen print as-value]"
+
+:local ifName [/interface get $wanIfId name]
+
+# Bail out if WAN is (unexpectedly) down.
+:local status [/interface get $wanIfId running]
+:if (!$status) do={
+  :error "UpdWAN: WAN-IF('$ifName') is not running!"
+}
+
+:local addrListId [/ip firewall address-list find list=$ifName ]
+:local oldIp [/ip firewall address-list get $addrListId address ]
+
+:local hostname   "$host.$domain"
+:local dnsIp  [:resolve $hostname]
+
+:log debug "UpdWAN: wan_if: $ifName, new_ip: $newIp, old_ip: $oldIp, dns_ip: $dnsIp"
+
+:if ($newIp != $oldIp) do={
+  /ip firewall address-list set $addrListId address=$newIp
+  :log info "UpdWAN: WAN address-list: $oldIp -> $newIp"
+} else={
+  :log info "UpdWAN: WAN address-list already '$newIp', no action."
+}
+
+:if ($newIp != $dnsIp) do={
+  :local okRegex "ErrCount>0"
+  :local url (\
+    "https://dynamicdns.park-your-domain.com/update\?domain=$domain&" .\
+    "password=190892ae5e99440e902deb5d9e84a051&" .\
+    "host=$host"\
+  )
+
+  # HTTP-GET to the dynamic DNS.
+  :local response ([/tool fetch url=$url mode=http output=user as-value]->"data")
+  :delay 1
+
+  # Check if error messages received from file.
+  :if (! ($response ~ $okRegex)) do={
+    :error "UpdWAN: dynamic DNS FAILED $dnsIp -> $newIp, response: $response"
+  }
+
+  :log info "UpdWAN: dynamic DNS: $dnsIp -> $newIp"
+  :log debug "UpdWAN: dynamic DNS HTTP-response: $response"
+} else={
+  :log info "UpdWAN: dynamic DNS already '$newIp', no action."
+}

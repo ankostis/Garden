@@ -10,6 +10,7 @@ tags: dev
 - Presentations:
   - [ ] [[1st-steps-in-programming-presentation]]
   - [ ] [[scientific-authoring-presentation]]
+- browser ext: pick streaming url and call http-API with it (eg [WiiM API](wiim-ultra)) based on [stream-recorder(MIT)](https://addons.mozilla.org/en-US/firefox/addon/stream-recorder/) or [stream-bypass](https://addons.mozilla.org/en-US/firefox/addon/stream-bypass/) extensions.
 
 # Tools
 

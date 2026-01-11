@@ -1,6 +1,8 @@
 # Live Coding on airdrag
 
-## legend:
+## legent:
+
+- [Teams sharepoint link to "Live Coding on airdrag"](https://eceuropaeu.sharepoint.com/:v:/r/teams/GRP-CO2Support2020andbeyond/Shared%20Documents/General/Recordings/VectorisingAirdragLiveCoding-edited-v1/Assets/VectorisingAirdragLiveCoding-edited-v1.mp4?csf=1&web=1&e=BH1G2f)
 
 - root-level: section-title
 - indented-level: one of advice, note, comment
@@ -83,8 +85,8 @@
       config files: pyproject.toml, setup.cfg, setup.py(deprecated),
       other [build libraries](https://packaging.python.org/en/latest/key_projects/#build)
       poetry, flit, hatch, build, ...
-    - 54:02: attempt for doctesting modules (and what is it?)
       - 54:09: @@@ comment(test): ...spoiler: we will fail to doctest...
+    - 54:02: attempt for doctesting modules (and what is it?)
         due to many pre-existing errors
       - 54:43: @@@ advice(test): doctest mixes documentation with unit-testing,
         which if checked regularly, serves as an API call example code.
