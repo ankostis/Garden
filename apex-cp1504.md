@@ -5,7 +5,7 @@
 - offer name: APG DA 6 DANTE Amplifier with DSP 4 x 1500W @ 8ohm 4ohm 2ohm 70V 100V 8kg
 - specs:
   - [2021 specs](https://apex-audio.be/wp-content/uploads/2021/04/CloudPower-Datasheet_CP1504.pdf)
-  - [2025 specs](https://apex-audio.be/wp-content/uploads/2025/04/CloudPower_Four_Channel_Dante_Tech_Datasheet_280425.pdf)
+  - [2025 specs](https://apex-audio.be/wp-content/uploads/2025/04/ _Four_Channel_Dante_Tech_Datasheet_280425.pdf)
 - [manual](https://apex-audio.be/wp-content/uploads/2025/04/CloudPower-User-Manual-V3_7_UL.pdf)
 - See [[Audio#Dante]] for software on Linux
 

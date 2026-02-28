@@ -15,6 +15,7 @@ tags: hass home my_IT
 
 ## TODO
 
+- [ ] shrink DB (https://community.home-assistant.io/t/how-to-keep-your-recorder-database-size-under-control/295795)
 - [x] Install Containered: `apt install docker.io`
   - [ ] MQTT AddOn
   - [x] cron-job for letsencrypt
@@ -75,6 +76,13 @@ tags: hass home my_IT
   - [ ] VSCode
   - [ ] Node-RED
 - [ ] [Central heating Heat meters googling](https://www.google.com/search?q=impeller+type+heat+meter+zigbee&oq=impeller+type+heat+meter+zigbee&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIGCAEQLhhA0gEIMzQ4NGowajSoAgCwAgA&sourceid=chrome&ie=UTF-8)
+
+## Shopping
+
+- Weather stations:
+  - [Ecowitt (with ultrasonic anemometer)](https://www.ecowitt.com/shop/goodsDetail/350)
+  - https://www.reddit.com/r/homeassistant/comments/1lkua7w/what_are_you_using_as_a_zigbee_weather_station/
+  - [Tuya Smart WiFi Weather Station Alarm Digital Wind Speed Direction Rainfall Light Index Air Quality Temperature Humidity Meter](https://www.banggood.com/Tuya-Smart-WiFi-Weather-Station-Alarm-Digital-Wind-Speed-Direction-Rainfall-Light-Index-Air-Quality-Temperature-Humidity-Meter-p-2020607.html?cur_warehouse=CZ)
 ## CO2 sensors
 
 NDIR sensors only
