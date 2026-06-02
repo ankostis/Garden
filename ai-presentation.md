@@ -23,6 +23,7 @@ Test-Driven Agent Workflows, Integration with linters/type checkers
 2025-Sep: Claude Sonnet 4.5
           Multi-step autonomous "no-hands" coding, completing complex tasks without humans
 |
+2025-Oct: NVIDIA'r Spark DGX, "home" AI rig
 2026-Apr: First FOSS contender, DeepSeek v4 (1.6T params, 49B active, 1M tokens)
 ```
 
