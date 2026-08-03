@@ -3,6 +3,11 @@
 "The constant son of the man who reads" (the meaning of my full name).
 I do read constantly: cosmology, math, physics, biology, philosophy, history, politics, economy, IT, fiction
 
+Electrical engineer by training, software engineer by trade,
+have been hammering Vecto since its inception in 2011.
+I'm a programmer that survive 35 years of technology,
+lately focused on how Agile breeds quality.
+
 - **ankostis@Gmail** - (Feb 2005)
 - [sperxios@Wikipedia](https://en.wikipedia.org/wiki/User:Sperxios) - (Apr 2005)
 - [sperxios@Βικιπαίδεια](https://el.wikipedia.org/wiki/%CE%A7%CF%81%CE%AE%CF%83%CF%84%CE%B7%CF%82:Sperxios) - (Sept 2006)

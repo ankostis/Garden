@@ -14,16 +14,17 @@
 2023-Nov: Extended Context Windows (128k): Agents can maintain coherent plans across large codebases
 |
 |
-2024-Jun: Claude 3.5 Sonnet: Superior code generation with reasoning traces visible to users
+2024-Jun-Nov: Claude 3.5 Sonnet: Superior code generation with reasoning traces visible to users
 |
 |
-2024-Nov-Jun: Model Context Protocol (MCP): Universal tool integration standard
+2024-Nov: Model Context Protocol (MCP): Universal tool integration standard
 Test-Driven Agent Workflows, Integration with linters/type checkers
 |
 2025-Sep: Claude Sonnet 4.5
           Multi-step autonomous "no-hands" coding, completing complex tasks without humans
 |
 2025-Oct: NVIDIA'r Spark DGX, "home" AI rig
+|
 2026-Apr: First FOSS contender, DeepSeek v4 (1.6T params, 49B active, 1M tokens)
 ```
 
@@ -110,19 +111,19 @@ alledgedly leading to **autonomous execution**
 - [Blog May 2025 May: Structure *context* with Markdown and cross-link its resources](https://medium.com/@wetrocloud/why-markdown-is-the-best-format-for-llms-aa0514a409a7)
 - [semi-paper 2026 Feb: LLM-generated contexts](https://www.emergentmind.com/topics/llm-generated-context-files)
 
-## Tokens to words
+## AI Tokens <--> words/LoCs (roughly)
 
 General Ratios (1 Token Equals):
 - English Prose: ~0.75 words/token (or ~4 characters)
 - Code (Python/JS): ~0.5 words / token (or ~2–3 tokens per word)
-- Code (Python/JS): 3-10 token / LoC, 1000
-Comparison:
-- Text(~1000 tokens/A4-page) ~= Code (~1000 tokens/LoCs)
+- Code (Python/JS): 3-10 token / LoC
+Comparison ~1000 tokens:
+- Text: x1 A4-page ~= 100 LoCs
 
 - ![my context's sizings 1](my-ctxt-size-1.png), ![my context's sizings 2](my-ctxt-size-2.png), ![my context's sizings 3](my-ctxt-size-3.png)ze-3.png), ![my context's sizings 4](my-ctxt-size-4.png)
 
 
-## Skills
+## Skills can conditionally customize your LLM
 
 A user-method to move instructions out of context:
 
@@ -140,6 +141,11 @@ A user-method to move instructions out of context:
 
 - [Tips for Coexisting GitHub Copilot Settings with Claude Code and Other AI Tools](https://zenn.dev/kesin11/articles/20251210_ai_agent_symlink?locale=en)
 
+## Agentic coding frameworks/harnesses:
+- [Superpowers vs. BMAD vs. SpecKit vs. GSD](https://ai.plainenglish.io/the-great-framework-showdown-superpowers-vs-bmad-vs-speckit-vs-gsd-360983101c10)
+- [The Force Won't Save Your PR: Catch AI Slop Before It Ships](https://www.youtube.com/watch?v=YcA4TPEtEyQ)
+  GSD vs BMAD 2026 agentic loop harnesses
+
 ## Resource links
 
 - [2025 State of AI-assisted software DORA report (PDF)](https://services.google.com/fh/files/misc/2025_state_of_ai_assisted_software_development.pdf)
@@ -152,9 +158,13 @@ A user-method to move instructions out of context:
 - I works best in Languages you don't understand
 - [Signs of AI](https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing)
 - ![DeepSeek v4 cost vs capabillities](DeepSeekV4CostVsCapabillities.png)
-r
+
 ## Ispra
 
 - Claude Cowork ([to replace copilot](https://www.youtube.com/watch?v=TR7IOm9IQx0)?)
   - Copilot for most people means MS365
 . **Claude in Chrome** extension is more important than Cowork
+
+## Andres presentation
+
+- ![Andres-stateOfLLModels](Andres-stateOfLLModels.png)
